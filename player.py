@@ -55,3 +55,13 @@ class Player:
                 continue
             break
 
+    def player_bmr(self):
+        """
+        Calculates player basic
+        metabolic rate based on previous
+        inputed parameters
+        """
+        bmr = 66.5 + (13.75 * self.weight) + (5.003 * self.height) -\
+            (6.75 * self.age)
+        return (round(bmr))
+
