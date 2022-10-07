@@ -15,3 +15,43 @@ class Player:
                     ' only letters')
                 continue
             break
+        while True:
+            try:
+                self.age = input(
+                        "please input player age"
+                        "(values should be between 18-38):")
+                self.age = int(self.age)
+            except ValueError:
+                print('Please use numeric digits.')
+                continue
+            if self.age < 18 or self.age > 38:
+                print('Please enter value in range from 18 to 38')
+                continue
+            break
+        while True:
+            try:
+                self.height = input(
+                    "please input player height"
+                    "(values should be between 160-230cm): ")
+                self.height = int(self.height)
+            except ValueError:
+                print('Please use numeric digits.')
+                continue
+            if self.height < 160 or self.height > 230:
+                print('Please enter value in range from 160 to 230cm')
+                continue
+            break
+        while True:
+            try:
+                self.weight = input(
+                        "please input player weight"
+                        "(values should be between 60-130kg): ")
+                self.weight = int(self.weight)
+            except ValueError:
+                print('Please use numeric digits.')
+                continue
+            if self.weight < 60 or self.weight > 130:
+                print('Please enter value in range from 60 to 130kg')
+                continue
+            break
+
