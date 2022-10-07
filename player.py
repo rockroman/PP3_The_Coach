@@ -10,3 +10,8 @@ class Player:
         while True:
             self.name = input("Please input player name: ")
             if not re.match(r'^[a-zA-Z\s]{1,15}$', self.name):
+                print(
+                    'Name can be 15 characters long and contain'
+                    ' only letters')
+                continue
+            break
