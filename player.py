@@ -63,5 +63,4 @@ class Player:
         """
         bmr = 66.5 + (13.75 * self.weight) + (5.003 * self.height) -\
             (6.75 * self.age)
-        return (round(bmr))
-
+        return round(bmr)
