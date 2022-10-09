@@ -18,8 +18,8 @@ def start_coach():
     my_players.append(player_2)
     clrscr()
     player_active_metabolic_rate()
-    pick_training()
-    # print(player_1.active_m_r)
+    get_player_trained()
+    print(player_1.training)
 
 
 def clrscr():
@@ -70,6 +70,18 @@ def pick_training():
         num -= 1
 
     return chosed_training
+
+
+def get_player_trained():
+    """
+    Assigns training option
+    to each player and gives
+    instance attribute to subclas  
+    """
+    for player in my_players:
+        print("pick a training option for", player.name.upper())
+        player.training = pick_training()
+        print("you choosed: ", player.training)
 
 
 start_coach()
