@@ -18,8 +18,10 @@ def start_coach():
     my_players.append(player_2)
     clrscr()
     player_active_metabolic_rate()
+   
     get_player_trained()
-    print(player_1.training)
+    player_train_value()
+    print(player_1.train_value)
 
 
 def clrscr():
@@ -46,6 +48,9 @@ def pick_training():
     User can pick training from
     enumerated list
     """
+    print("Note!Higher the training number")
+    print("more Value it brings")
+    print("Don't overtrain the player")
     print("here are the training options...\n")
     trainings = [
         'GYM', 'CARDIO', 'SHOOTING', 'BALL_HANDLING', 'DUELING',
@@ -72,25 +77,30 @@ def pick_training():
     return chosed_training
 
 
+# holds trainings assigned to each player
+my_players_training = []
+
+
 def get_player_trained():
     """
     Assigns training option
     to each player and gives
-    instance attribute to subclas  
+    instance attribute to subclass
     """
     for player in my_players:
         print("pick a training option for", player.name.upper())
         player.training = pick_training()
-        print("you choosed: ", player.training)
-
+        my_players_training.append(player.training)
+        print("you choosed:--> ", player.training, "\n")
+        
 
 # Variables that will give choosed training strings value
 #  basic training
-CARDIO = 30
+CARDIO = 25
 GYM = 25
-SHOOTING = 30
+SHOOTING = 25
 # intermediate training
-BALL_HANDLING = 25
+BALL_HANDLING = 30
 DRIBLLING = 30
 DUELING = 45
 # advanced training
@@ -99,7 +109,22 @@ DEFENSE_REBOUNDING = 40
 PIVOTING = 30
 
 
+def player_train_value():
+    """
+    calculating player train value
+    based on training choices and
+    reduces value if player gets overtrained
+    """
+    for player in my_players:
+        player.train_value = []
+        for j in player.training:
+            player.train_value.append(globals()[j])
+        player.train_value = sum(player.train_value)
+        if player.train_value > 100:
+            player.train_value = player.train_value -\
+                 (player.train_value * 0.38)
+            player.train_value = round(player.train_value)
+    return player.train_value
+
 
 start_coach()
-
-
