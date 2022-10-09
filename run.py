@@ -22,6 +22,7 @@ def start_coach():
     get_player_trained()
     player_train_value()
     print(player_1.train_value)
+    pick_food_options()
 
 
 def clrscr():
@@ -122,9 +123,54 @@ def player_train_value():
         player.train_value = sum(player.train_value)
         if player.train_value > 100:
             player.train_value = player.train_value -\
-                 (player.train_value * 0.38)
+                 (player.train_value * 0.37)
             player.train_value = round(player.train_value)
     return player.train_value
+
+
+def pick_food_options():
+    """
+    displays range of meals for user
+    to choose for player by enumerating them in order
+    """
+    menu = ['Yoghurt 200g ,2 bananas and 80g uf nuts',
+            'Granola 150g  and  Greek yogurt 250g',
+            'butter 50g whole grain bagel,2 boiled eggs,cottage cheese',
+            'Grain toast 150g ,160g shaved ham , tomato and mushrooms\
+ 2 avocado',
+            'ratatouille 280g cod fillet and 200g feta tomato salad',
+            'seasonal vegetables 160g pasta 90g white sauce \
+ and 220g of salmon',
+            'avocado salad 230g beef steak and 250g of baked potatoes',
+            'Broccoli ,250g grilled chicken breasts,180g rice and Quinoa \
+ and Mozzarella Salad',
+            'grilled pepper 200g of chicken breasts and 70g of crusty bread',
+            'Tuna ,120g pasta ,green beans,80g feta cheese',
+            'Burrito  with lean mince beans 50g corn \
+ and tomato and onion salad',
+            'Egg frittata with sliced sweet potato  zucchini \
+ capsicum and feta cheese']
+    for i, j in enumerate(menu):
+        print(i, j)
+    num = 2
+    print("\n")
+    chosed_meals = []
+    while num > 0:
+        while True:
+            try:
+                chosed = input('choose meal number: ')
+                chosed = int(chosed)
+            except ValueError:
+                print("Please choose numeric digits")
+                continue
+            if chosed < 0 or chosed > len(menu)-1:
+                print("please choose only number assigned to meal")        
+                continue
+            break
+        chosed_meals.append(menu[chosed])
+        num -= 1
+
+    return chosed_meals
 
 
 start_coach()
