@@ -48,8 +48,8 @@ def pick_training():
     """
     print("here are the training options...\n")
     trainings = [
-        'Gym', 'Cardio', 'Shooting', 'Ball_handling', 'Dueling',
-        'Driblling', 'Defense_Rebounding', 'Pick_n_roll', 'Pivoting']
+        'GYM', 'CARDIO', 'SHOOTING', 'BALL_HANDLING', 'DUELING',
+        'DRIBLLING', 'DEFENSE_REBOUNDING', 'PICK_N_ROLL', 'PIVOTING']
     for i, j in enumerate(trainings):
         print(i, j)
     num = 3
@@ -82,6 +82,22 @@ def get_player_trained():
         print("pick a training option for", player.name.upper())
         player.training = pick_training()
         print("you choosed: ", player.training)
+
+
+# Variables that will give choosed training strings value
+#  basic training
+CARDIO = 30
+GYM = 25
+SHOOTING = 30
+# intermediate training
+BALL_HANDLING = 25
+DRIBLLING = 30
+DUELING = 45
+# advanced training
+PICK_N_ROLL = 45
+DEFENSE_REBOUNDING = 40
+PIVOTING = 30
+
 
 
 start_coach()
