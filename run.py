@@ -21,8 +21,12 @@ def start_coach():
    
     get_player_trained()
     player_train_value()
+    get_player_meal()
     print(player_1.train_value)
-    pick_food_options()
+    print(player_2.train_value)
+    print(player_1.meals)
+    print(player_2.meals)
+    
 
 
 def clrscr():
@@ -152,7 +156,7 @@ def pick_food_options():
  capsicum and feta cheese']
     for i, j in enumerate(menu):
         print(i, j)
-    num = 2
+    num = 3
     print("\n")
     chosed_meals = []
     while num > 0:
@@ -171,6 +175,21 @@ def pick_food_options():
         num -= 1
 
     return chosed_meals
+
+
+def get_player_meal():
+    """
+    function assigns each player with 
+    food option choosed by User
+    """
+    for play in my_players:
+        print("please choose " + play.name.upper() + " meals for today")
+        play.meals = pick_food_options()
+        print("you choosed:-->", play.meals)
+        player_meals = play.meals
+        print("Calculating player nutrition value...\n")
+
+    return player_meals
 
 
 start_coach()
