@@ -5,18 +5,17 @@ through the Google Sheets API v4
 import pygsheets
 
 # code taken from official pygsheets docs
-# PATH = 'C:\\Users\\una&roman\\OneDrive\\Radna površina\\test.py\\creds.json'
 PATH = '/workspace/PP3_The_Coach/creds.json'
 gc = pygsheets.authorize(service_account_file=PATH)
 sh = gc.open('players_data')  # Open GoogleSheet
 WK1 = sh[0]
- 
-# print(cell_range)  
+
+# print(cell_range)
 
 
 def insert_rows(my_list):
     """
-    function that populates 
+    function that populates
     google sheet with players values
     """
     new_row = []
@@ -40,4 +39,8 @@ def insert_rows(my_list):
 # players values created by user input
 
 
-cell_range = WK1.range('A1:E3', returnas='matrix')
+cell_range0 = WK1.range('A1:E6', returnas='matrix')
+cell_range1 = WK1.range('A1:F6', returnas='matrix')
+
+# WK1.insert_cols(5, number=1, values=['ACTIVE_met_rate'], inherit=False)
+# WK1.delete_cols(5, number=1)
