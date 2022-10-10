@@ -1,6 +1,7 @@
 from random import randint
 from player import Player
 import requests
+from data import insert_rows
 
 import click
 
@@ -21,24 +22,26 @@ def start_coach():
     my_players.append(player_2)
     clrscr()
     player_active_metabolic_rate()
-   
-    get_player_trained()
-    player_train_value()
-    get_player_meal()
-    player_nutrition_value()
-    player_nutrition_score()
-    for i in my_players:
-        overall_player_score(i)
+    insert_rows(my_players)
 
-    team_preformance_score()
-    print(player_1.train_value)
-    print(player_1.active_m_r)
-    print(player_1.nutrition_score)
-    print(player_1.overall_score)
-    print(player_2.train_value)
-    print(player_2.active_m_r)
-    print(player_2.nutrition_score)
-    print(player_2.overall_score)
+    # get_player_trained()
+    # player_train_value()
+    # get_player_meal()
+    # player_nutrition_value()
+    # player_nutrition_score()
+    # for i in my_players:
+    #     overall_player_score(i)
+
+    # team_preformance_score()
+
+    # print(player_1.train_value)
+    # print(player_1.active_m_r)
+    # print(player_1.nutrition_score)
+    # print(player_1.overall_score)
+    # print(player_2.train_value)
+    # print(player_2.active_m_r)
+    # print(player_2.nutrition_score)
+    # print(player_2.overall_score)
     
 
 def clrscr():
