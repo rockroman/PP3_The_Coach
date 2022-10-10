@@ -27,14 +27,18 @@ def start_coach():
     get_player_meal()
     player_nutrition_value()
     player_nutrition_score()
-   
+    for i in my_players:
+        overall_player_score(i)
 
+    team_preformance_score()
     print(player_1.train_value)
     print(player_1.active_m_r)
     print(player_1.nutrition_score)
+    print(player_1.overall_score)
     print(player_2.train_value)
     print(player_2.active_m_r)
     print(player_2.nutrition_score)
+    print(player_2.overall_score)
     
 
 def clrscr():
@@ -257,14 +261,27 @@ def player_nutrition_score():
     return nutrition_score
 
 
-def overall_player_score(x):
+def overall_player_score(each):
     """
     function tahat calculates overall
     player score and will be used in loop 
     for each player
     """
-    x.overall_score = x.nutrition_score + x.train_value
-    return x.overall_score
+    each.overall_score = each.nutrition_score + each.train_value
+    return each.overall_score
+
+
+def team_preformance_score():
+    """
+    get final team score bay summ of all players
+    score and give the result in precentages
+    """
+    team_score = []
+    for i in my_players:
+        team_score.append(i.overall_score)
+    team_score = sum(team_score)/10
+    print("BASED ON YOUR INPUT AN DECISIONS..\n")
+    print(f"YOUR TEAM PERFOMANCE WOULD BE {team_score}%")
 
 
 start_coach()
