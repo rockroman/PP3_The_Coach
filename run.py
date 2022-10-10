@@ -1,5 +1,6 @@
 import click
 from player import Player
+import requests
 
 
 my_players = []
@@ -190,6 +191,27 @@ def get_player_meal():
         print("Calculating player nutrition value...\n")
 
     return player_meals
+
+
+def get_meal_value(meal):
+    """
+    Funtion that gets caloric value of meal
+    choosed by user by calling "Calorie Ninja API"
+    """
+    query = meal
+    api_url = 'https://api.calorieninjas.com/v1/nutrition?query='
+    my_key = {'X-Api-Key': 'FmFFagHTyI87GX8IerJW7w==0J4N2eWYlplpbfQX'}
+    response = requests.get(api_url + query, headers=my_key, timeout=5)
+    if response.status_code == requests.codes.ok:  # pylint: disable=no-member
+        response = response.json()
+    else:
+        print("Error:", response.status_code, response.text)
+    nut_current = []
+    for item in response["items"]:
+        nut_current.append(item["calories"])
+
+    nut_current = sum(nut_current)
+    return round(nut_current)
 
 
 start_coach()
