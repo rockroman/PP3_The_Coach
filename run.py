@@ -23,12 +23,14 @@ def start_coach():
     get_player_trained()
     player_train_value()
     get_player_meal()
+    player_nutrition_value()
     print(player_1.train_value)
+    print(player_1.calorie_value)
+    print(player_1.active_m_r)
     print(player_2.train_value)
-    print(player_1.meals)
-    print(player_2.meals)
+    print(player_2.active_m_r)
+    print(player_2.calorie_value)
     
-
 
 def clrscr():
     """
@@ -212,6 +214,21 @@ def get_meal_value(meal):
 
     nut_current = sum(nut_current)
     return round(nut_current)
+
+
+def player_nutrition_value():
+    """
+    function that sums caloric value of all meals 
+    assigned to each player by using a callback function
+    """
+    for i in my_players:
+        i.calorie_value = []
+        for j in i.meals:
+            value = get_meal_value(j)
+            i.calorie_value.append(value)
+        i.calorie_value = sum(i.calorie_value)
+        player_calorie_value = i.calorie_value
+    return player_calorie_value
 
 
 start_coach()
