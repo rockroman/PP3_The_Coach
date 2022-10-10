@@ -1,6 +1,8 @@
-import click
+from random import randint
 from player import Player
 import requests
+
+import click
 
 
 my_players = []
@@ -24,12 +26,14 @@ def start_coach():
     player_train_value()
     get_player_meal()
     player_nutrition_value()
+    player_nutrition_score()
+
     print(player_1.train_value)
-    print(player_1.calorie_value)
     print(player_1.active_m_r)
+    print(player_1.nutrition_score)
     print(player_2.train_value)
     print(player_2.active_m_r)
-    print(player_2.calorie_value)
+    print(player_2.nutrition_score)
     
 
 def clrscr():
@@ -229,6 +233,26 @@ def player_nutrition_value():
         i.calorie_value = sum(i.calorie_value)
         player_calorie_value = i.calorie_value
     return player_calorie_value
+
+
+def player_nutrition_score():
+    """
+    function that compares active metabolic rate of player 
+    with caloric value of food intake and assignes nutrition score to
+    player adjusting it in case of too many calories taken and
+    if insuficient calories are taken
+    """
+    for i in my_players:
+        if i.calorie_value > (i.active_m_r + (i.active_m_r * 0.22)):
+            i.nutrition_score = randint(61, 70)
+        elif i.calorie_value < (i.active_m_r - (i.active_m_r * 0.27)):
+            i.nutrition_score = randint(51, 60)
+        elif i.calorie_value == i.active_m_r:
+            i.nutrition_score = 100
+        else:
+            i.nutrition_score = randint(80, 92)
+
+    return i.nutrition_score
 
 
 start_coach()
