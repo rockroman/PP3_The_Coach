@@ -1,7 +1,9 @@
 from random import randint
+from tabulate import tabulate
 from player import Player
 import requests
-from data import insert_rows
+from data import insert_rows, WK1, cell_range
+
 
 import click
 
@@ -23,7 +25,7 @@ def start_coach():
     clrscr()
     player_active_metabolic_rate()
     insert_rows(my_players)
-
+    print(tabulate(cell_range, headers="firstrow", tablefmt="fancy_grid"))
     # get_player_trained()
     # player_train_value()
     # get_player_meal()
@@ -82,7 +84,7 @@ def pick_training():
     while num > 0:
         while True:
             try:
-                chosed = input('choose training number: ')
+                chosed = input('choose training number: \n ')
                 chosed = int(chosed)
             except ValueError:
                 print("Please choose numeric digits")
@@ -177,7 +179,7 @@ def pick_food_options():
     while num > 0:
         while True:
             try:
-                chosed = input('choose meal number: ')
+                chosed = input('choose meal number: \n ')
                 chosed = int(chosed)
             except ValueError:
                 print("Please choose numeric digits")

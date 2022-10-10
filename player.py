@@ -8,7 +8,7 @@ class Player:
     """
     def __init__(self):
         while True:
-            self.name = input("Please input player name: ")
+            self.name = input("Please input player name: \n ")
             if not re.match(r'^[a-zA-Z\s]{1,15}$', self.name):
                 print(
                     'Name can be 15 characters long and contain'
@@ -19,7 +19,7 @@ class Player:
             try:
                 self.age = input(
                         "please input player age"
-                        "(values should be between 18-38):")
+                        "(values should be between 18-38): \n")
                 self.age = int(self.age)
             except ValueError:
                 print('Please use numeric digits.')
@@ -32,7 +32,7 @@ class Player:
             try:
                 self.height = input(
                     "please input player height"
-                    "(values should be between 160-230cm): ")
+                    "(values should be between 160-230cm): \n ")
                 self.height = int(self.height)
             except ValueError:
                 print('Please use numeric digits.')
@@ -45,7 +45,7 @@ class Player:
             try:
                 self.weight = input(
                         "please input player weight"
-                        "(values should be between 60-130kg): ")
+                        "(values should be between 60-130kg): \n ")
                 self.weight = int(self.weight)
             except ValueError:
                 print('Please use numeric digits.')

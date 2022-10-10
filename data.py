@@ -10,7 +10,7 @@ PATH = '/workspace/PP3_The_Coach/creds.json'
 gc = pygsheets.authorize(service_account_file=PATH)
 sh = gc.open('players_data')  # Open GoogleSheet
 WK1 = sh[0]
-# cell_range = WK1.range('A1:E3', returnas='matrix')  
+ 
 # print(cell_range)  
 
 
@@ -35,3 +35,9 @@ def insert_rows(my_list):
         new_row = []
         i += 1
         my_row += 1
+
+# make a variable that holds value of google sheet
+# players values created by user input
+
+
+cell_range = WK1.range('A1:E3', returnas='matrix')
