@@ -27,6 +27,7 @@ def start_coach():
     get_player_meal()
     player_nutrition_value()
     player_nutrition_score()
+   
 
     print(player_1.train_value)
     print(player_1.active_m_r)
@@ -254,6 +255,16 @@ def player_nutrition_score():
             nutrition_score = i.nutrition_score
 
     return nutrition_score
+
+
+def overall_player_score(x):
+    """
+    function tahat calculates overall
+    player score and will be used in loop 
+    for each player
+    """
+    x.overall_score = x.nutrition_score + x.train_value
+    return x.overall_score
 
 
 start_coach()
