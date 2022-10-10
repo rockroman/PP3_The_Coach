@@ -251,8 +251,9 @@ def player_nutrition_score():
             i.nutrition_score = 100
         else:
             i.nutrition_score = randint(80, 92)
+            nutrition_score = i.nutrition_score
 
-    return i.nutrition_score
+    return nutrition_score
 
 
 start_coach()
