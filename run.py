@@ -1,8 +1,9 @@
 from random import randint
-from tabulate import tabulate
 from player import Player
 import requests
-from data import insert_rows, WK1, cell_range0
+from data import insert_rows, show_table1
+
+
 
 
 import click
@@ -25,9 +26,15 @@ def start_coach():
     clrscr()
     player_active_metabolic_rate()
     insert_rows(my_players)
-    print(tabulate(cell_range0, headers="firstrow", tablefmt="fancy_grid"))
+    show_table1()
+    
+   
+   
+    # print(player_1.active_m_r)
+    # print(player_2.active_m_r)
     # get_player_trained()
     # player_train_value()
+   
     # get_player_meal()
     # player_nutrition_value()
     # player_nutrition_score()

@@ -3,14 +3,12 @@ A simple, intuitive python library to access google spreadsheets
 through the Google Sheets API v4
 """
 import pygsheets
-
+from tabulate import tabulate
 # code taken from official pygsheets docs
-PATH = '/workspace/PP3_The_Coach/creds.json'
+PATH = '//workspace//PP3_The_Coach//creds.json'
 gc = pygsheets.authorize(service_account_file=PATH)
 sh = gc.open('players_data')  # Open GoogleSheet
 WK1 = sh[0]
-
-# print(cell_range)
 
 
 def insert_rows(my_list):
@@ -35,12 +33,17 @@ def insert_rows(my_list):
         i += 1
         my_row += 1
 
+
+def show_table1():
+    first_table = WK1.range('A1:E6', returnas='matrix')
+    print(tabulate(first_table, headers="firstrow", tablefmt="fancy_grid"))
+
 # make a variable that holds value of google sheet
 # players values created by user input
 
 
-cell_range0 = WK1.range('A1:E6', returnas='matrix')
-cell_range1 = WK1.range('A1:F6', returnas='matrix')
+
+# cell_range1 = WK1.range('A1:F6', returnas='matrix')
 
 # WK1.insert_cols(5, number=1, values=['ACTIVE_met_rate'], inherit=False)
 # WK1.delete_cols(5, number=1)
