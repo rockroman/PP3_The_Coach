@@ -6,14 +6,14 @@ WK2 = sh[1]
 USER_DATA = []
 
  
-def display_menu():
-    print("Hello and Welcome are you a New user?")
-    status = input("press 'y' for yes and 'n' for no \n")
-    if status == "y":
-        # old_user()
-        pass
-    elif status == "n":
-        new_user()
+# def display_menu():
+#     print("Hello and Welcome are you a New user?")
+#     status = input("press 'y' for yes and 'n' for no \n")
+#     if status == "y":
+#         # old_user()
+#         pass
+#     elif status == "n":
+#         new_user()
  
 
 def new_user():
@@ -26,15 +26,18 @@ def new_user():
             continue
         break
     while True:
-        email = input("Please enter your email address: \n ")
-        
+        try:
+            email = input("Please enter your email address: \n ")
+            validate_email(email)
+        except EmailNotValidError as err:
+            print(str(err))
             continue
         break
+    print("wery ffff")
 
-
-display_menu()
+# display_menu()
 # try
-
+new_user()
 
     
 
