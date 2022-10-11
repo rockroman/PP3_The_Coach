@@ -6,14 +6,14 @@ WK2 = sh[1]
 USER_DATA = []
 
  
-# def display_menu():
-#     print("Hello and Welcome are you a New user?")
-#     status = input("press 'y' for yes and 'n' for no \n")
-#     if status == "y":
-#         # old_user()
-#         pass
-#     elif status == "n":
-#         new_user()
+def display_menu():
+    print("Hello and Welcome are you a New user?")
+    status = input("press 'y' for yes and 'n' for no \n")
+    if status == "y":
+        new_user()   
+    elif status == "n":
+        exsisting_user()
+       
  
 
 def new_user():
@@ -38,14 +38,23 @@ def new_user():
     user_row += 1
    
 
+def exsisting_user():
+    email = input("Please enter your email address: \n ")
+    email_col = WK2.get_col(2)
+    username_col = WK2.get_col(1)
+    username_col_data = username_col[1:]
+    email_col_data = email_col[1:]
+    if (email in email_col_data):
+        index = email_col_data.index(email)
+        print(f"Welcome again {username_col_data[index]}")
+    else:
+        print('There is no such a user in database')
+        display_menu()
+ 
 
-# # name_column = WK2.get_col(1)
-# WK2.update_col(index=1, values=['eeee', 'rrrrr', 'ggggg'], row_offset=0)
-
-new_user()
 
 
-
+display_menu()
 
 
 
