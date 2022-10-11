@@ -17,6 +17,7 @@ USER_DATA = []
  
 
 def new_user():
+    user_row = 1
     while True:
         username = input("Please enter your username: \n ")
         if not re.match(r'^[a-zA-z0-9]{2,12}$', username):
@@ -33,13 +34,15 @@ def new_user():
             print(str(err))
             continue
         break
-    print("wery ffff")
+    WK2.insert_rows(row=user_row, number=1, values=[username, email])
+    user_row += 1
+   
 
-# display_menu()
-# try
+
+# # name_column = WK2.get_col(1)
+# WK2.update_col(index=1, values=['eeee', 'rrrrr', 'ggggg'], row_offset=0)
+
 new_user()
-
-    
 
 
 

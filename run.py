@@ -30,6 +30,7 @@ def start_coach():
     
    
    
+   
     # print(player_1.active_m_r)
     # print(player_2.active_m_r)
     # get_player_trained()
