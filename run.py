@@ -3,9 +3,6 @@ from player import Player
 import requests
 from data import insert_rows, show_table1
 
-
-
-
 import click
 
 
@@ -297,4 +294,4 @@ def team_preformance_score():
     print(f"YOUR TEAM PERFOMANCE WOULD BE {team_score}%")
 
 
-start_coach()
+# start_coach()
