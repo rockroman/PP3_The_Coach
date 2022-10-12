@@ -1,6 +1,9 @@
-from data import sh
 import re
+from time import sleep
+import sys
 from email_validator import validate_email, EmailNotValidError
+from data import sh
+
 
 WK2 = sh[1]
 USER_DATA = []
@@ -50,42 +53,47 @@ def exsisting_user():
     else:
         print('There is no such a user in database')
         display_menu()
+
+
+def slow_print(item):
+    """
+    prints the message letter by letter
+    with specified time delay
+    """
+    for char in item:
+        sleep(0.2)
+        sys.stdout.write(char)
+        sys.stdout.flush()
+    print(" ")
  
 
 
 
-display_menu()
+def welcome():
+    """
+    welcome message and a program description
+    by using ASCII art 
+    """
+    line1 = "   Welcome to     "
+    
 
 
+def program_title():
+    """
+    prints title
+    """
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-#     if create_login in users:
-#         print("\nLogin name already exist!\n")
-#     else:
-#         create_passw = input("Create password: ")
-#         users[createLogin] = create_passw
-#         print("\nUser created\n")
- 
-# def old_user():
-#     login = input("Enter login name: ")
-#     passw = input("Enter password: ")
- 
-#     if login in users and users[login] == passw:
-#         print("\nLogin successful!\n")
-#     else:
-#         print("\nUser doesn't exist or wrong password!\n")
- 
-# while status != "q":
+    print('                                  ')  
+    print('         ████████╗██╗  ██╗███████╗') 
+    print('         ╚══██╔══╝██║  ██║██╔════╝') 
+    print('            ██║   ███████║█████╗  ') 
+    print('            ██║   ██╔══██║██╔══╝  ')  
+    print('            ██║   ██║  ██║███████╗') 
+    print('            ╚═╝   ╚═╝  ╚═╝╚══════╝')  
+    print('                                           ')
+    print('  ██████╗  ██████╗   █████╗  ██████╗ ██╗  ██╗')
+    print(' ██╔════╝ ██╔═══██╗ ██╔══██╗██╔════╝ ██║  ██║')
+    print(' ██║      ██║   ██║ ███████║██║      ███████║')
+    print(' ██║      ██║   ██║ ██╔══██║██║      ██╔══██║') 
+    print(' ╚██████╗ ╚██████╔╝ ██║  ██║╚██████╗ ██║  ██║')
+    print('  ╚═════╝  ╚═════╝  ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝')
