@@ -38,6 +38,11 @@ def show_table1():
     first_table = WK1.range('A1:E6', returnas='matrix')
     print(tabulate(first_table, headers="firstrow", tablefmt="fancy_grid"))
 
+def show_table2():
+    first_table = WK1.range('A1:F6', returnas='matrix')
+    print(tabulate(first_table, headers="firstrow", tablefmt="fancy_grid"))
+
+
 # make a variable that holds value of google sheet
 # players values created by user input
 

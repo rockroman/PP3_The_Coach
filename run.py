@@ -1,10 +1,12 @@
 from random import randint
+import click
+# from validate import slow_print, display_menu, program_title 
+import validate as valid
 from player import Player
 import requests
-from data import insert_rows, show_table1
-
-import click
-
+import time
+import sys
+from data import insert_rows, show_table1, show_table2
 
 my_players = []
 
@@ -23,24 +25,23 @@ def start_coach():
     clrscr()
     player_active_metabolic_rate()
     insert_rows(my_players)
+    valid.slow_print("Here is your Team")
     show_table1()
-    
-   
-   
-   
     # print(player_1.active_m_r)
     # print(player_2.active_m_r)
-    # get_player_trained()
-    # player_train_value()
-   
-    # get_player_meal()
-    # player_nutrition_value()
-    # player_nutrition_score()
-    # for i in my_players:
-    #     overall_player_score(i)
-
-    # team_preformance_score()
-
+    get_player_trained()
+    clrscr()
+    valid.slow_print("Your team Values")
+    show_table2()
+    player_train_value()
+    get_player_meal()
+    clrscr()
+    print(player_1.meals)
+    player_nutrition_value()
+    player_nutrition_score()
+    for i in my_players:
+        overall_player_score(i)
+    team_preformance_score()
     # print(player_1.train_value)
     # print(player_1.active_m_r)
     # print(player_1.nutrition_score)
@@ -49,6 +50,47 @@ def start_coach():
     # print(player_2.active_m_r)
     # print(player_2.nutrition_score)
     # print(player_2.overall_score)
+
+
+def welcome():
+    """
+    welcome message and a program description
+    by using ASCII art 
+    """
+    clrscr()
+    line1 = "   Welcome to     "
+    valid.slow_print(line1)
+    valid.program_title()
+    line2 = """
+Program that will determine performance
+percentage of the Team that you created
+'The Coach' will give you a chance to create
+a Team of 5 Basketball players.
+You will:
+Assign each player with 3 training options
+Assign food intake with 3 options for a player
+The result will be  a percentage how well
+would your team perform based on your instructions
+ARE YOU READY?
+        """
+    # slow_print(line2)
+    print(line2)
+    time.sleep(1)
+    while True:
+        try:
+            answer = input("1)Proceed\n2)Exit program \n")
+            answer = int(answer)
+        except ValueError:
+            print("Please choose between 1 or 2")
+            continue
+        if answer > 2 or answer < 1:
+            print("Please choose between 1 or 2")
+            continue
+        break
+    if answer == 1:
+        valid.display_menu()
+    elif answer == 2:
+        sys.exit()
     
 
 def clrscr():
@@ -294,4 +336,10 @@ def team_preformance_score():
     print(f"YOUR TEAM PERFOMANCE WOULD BE {team_score}%")
 
 
-# start_coach()
+def main():
+    welcome()
+    start_coach()
+
+
+if __name__ == "__main__":
+    main()
