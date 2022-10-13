@@ -18,12 +18,13 @@ def start_coach():
     """
     clrscr()
     valid.program_title()
-    print("inputs for player1..\n")
-    player_1 = Player()
-    my_players.append(player_1)
-    print("inputs for player2..\n")
-    player_2 = Player()
-    my_players.append(player_2)
+    # print("inputs for player1..\n")
+    # player_1 = Player()
+    # my_players.append(player_1)
+    # print("inputs for player2..\n")
+    # player_2 = Player()
+    # my_players.append(player_2)
+    create_players()
     clrscr()
     player_active_metabolic_rate()
     insert_rows(my_players)
@@ -102,6 +103,23 @@ def clrscr():
     click.clear()
 
 
+def create_players():
+    """
+    creates team of players from
+    a Player class and appends each player to
+    a list of players
+    """
+    for i in range(1, 3):
+        player = f"player{i}"
+        line = f"Please enter values for player{i}"
+        valid.slow_print(line)
+        player = Player()
+        my_players.append(player)
+        time.sleep(1)
+        clrscr()
+        valid.program_title()
+        
+
 def player_active_metabolic_rate():
     """
     Calculating active_metabolic_rate
@@ -119,13 +137,14 @@ def pick_training():
     User can pick training from
     enumerated list
     """
-    note = """
-NOTE! Higher the training number
-more Value it brings.
-Don't overtrain the player
-    """
-    valid.slow_print(note)
-    print("here are the training options...\n")
+#     note = """
+# YOU CAN NOW ASSIGN A TRAINING TO EACH PLAYER
+# NOTE! Higher the training number
+# more Value it brings.
+# Don't overtrain the player
+#     """
+#     valid.slow_print(note)
+#     print("here are the training options...\n")
     trainings = [
         'GYM', 'CARDIO', 'SHOOTING', 'BALL_HANDLING', 'DUELING',
         'DRIBLLING', 'DEFENSE_REBOUNDING', 'PICK_N_ROLL', 'PIVOTING']
@@ -161,11 +180,21 @@ def get_player_trained():
     to each player and gives
     instance attribute to subclass
     """
+    note = """
+YOU CAN NOW ASSIGN A TRAINING TO EACH PLAYER
+NOTE! Higher the training number
+more Value it brings.
+Don't overtrain the player
+    """
+    valid.slow_print(note)
+    print("here are the training options...\n")
     for player in my_players:
-        player.training = pick_training()
         print("pick a training option for", player.name.upper())
+        player.training = pick_training()
         my_players_training.append(player.training)
         print("you choosed:--> ", player.training, "\n")
+        time.sleep(1.5)
+        clrscr()
 
 
 # Variables that will give choosed training strings value
@@ -345,7 +374,7 @@ def main():
     """
     runs all the functions 
     """
-    welcome()
+    # welcome()
     start_coach()
 
 
