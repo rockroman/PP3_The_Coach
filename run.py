@@ -16,6 +16,8 @@ def start_coach():
     Main function that runs
     the game
     """
+    clrscr()
+    valid.program_title()
     print("inputs for player1..\n")
     player_1 = Player()
     my_players.append(player_1)
@@ -117,9 +119,12 @@ def pick_training():
     User can pick training from
     enumerated list
     """
-    print("Note!Higher the training number")
-    print("more Value it brings")
-    print("Don't overtrain the player")
+    note = """
+NOTE! Higher the training number
+more Value it brings.
+Don't overtrain the player
+    """
+    valid.slow_print(note)
     print("here are the training options...\n")
     trainings = [
         'GYM', 'CARDIO', 'SHOOTING', 'BALL_HANDLING', 'DUELING',
@@ -157,11 +162,11 @@ def get_player_trained():
     instance attribute to subclass
     """
     for player in my_players:
-        print("pick a training option for", player.name.upper())
         player.training = pick_training()
+        print("pick a training option for", player.name.upper())
         my_players_training.append(player.training)
         print("you choosed:--> ", player.training, "\n")
-        
+
 
 # Variables that will give choosed training strings value
 #  basic training
@@ -337,6 +342,9 @@ def team_preformance_score():
 
 
 def main():
+    """
+    runs all the functions 
+    """
     welcome()
     start_coach()
 
