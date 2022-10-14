@@ -85,7 +85,7 @@ def slow_print(item):
     with specified time delay
     """
     for char in item:
-        sleep(0.1)
+        sleep(0.07)
         sys.stdout.write(char)
         sys.stdout.flush()
     print(" ")

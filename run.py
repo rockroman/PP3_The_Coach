@@ -18,16 +18,10 @@ def start_coach():
     """
     clrscr()
     valid.program_title()
-    # print("inputs for player1..\n")
-    # player_1 = Player()
-    # my_players.append(player_1)
-    # print("inputs for player2..\n")
-    # player_2 = Player()
-    # my_players.append(player_2)
     create_players()
-    clrscr()
     player_active_metabolic_rate()
     insert_rows(my_players)
+    clrscr()
     valid.slow_print("Here is your Team")
     show_table1()
     get_player_trained()
@@ -106,7 +100,6 @@ def create_players():
         valid.slow_print(line)
         player = Player()
         my_players.append(player)
-        time.sleep(1)
         clrscr()
         valid.program_title()
         
@@ -274,9 +267,17 @@ def get_player_meal():
     for play in my_players:
         print("please choose " + play.name.upper() + " meals for today")
         play.meals = pick_food_options()
-        print("you choosed:-->", play.meals)
+        time.sleep(0.5)
+        # print("you choosed:-->", play.meals)
+        clrscr()
+        print("you choosed: ")
+        for i in play.meals:
+            print(i)
+
         player_meals = play.meals
         print("Calculating player nutrition value...\n")
+        time.sleep(0.8)
+        clrscr()
 
     return player_meals
 
