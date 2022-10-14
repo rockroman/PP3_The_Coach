@@ -6,7 +6,7 @@ from player import Player
 import requests
 import time
 import sys
-from data import insert_rows, show_table1, show_table2
+from data import insert_rows, insert_rows2, show_table1, show_table2
 
 my_players = []
 
@@ -30,30 +30,21 @@ def start_coach():
     insert_rows(my_players)
     valid.slow_print("Here is your Team")
     show_table1()
-    # print(player_1.active_m_r)
-    # print(player_2.active_m_r)
     get_player_trained()
     clrscr()
-    valid.slow_print("Your team Values")
-    show_table2()
+    # valid.slow_print("Your team Values")
+    # show_table2()
     player_train_value()
     get_player_meal()
     clrscr()
-    print(player_1.meals)
     player_nutrition_value()
     player_nutrition_score()
+    insert_rows2(my_players)
+    show_table2()
     for i in my_players:
         overall_player_score(i)
     team_preformance_score()
-    # print(player_1.train_value)
-    # print(player_1.active_m_r)
-    # print(player_1.nutrition_score)
-    # print(player_1.overall_score)
-    # print(player_2.train_value)
-    # print(player_2.active_m_r)
-    # print(player_2.nutrition_score)
-    # print(player_2.overall_score)
-
+   
 
 def welcome():
     """
@@ -193,7 +184,7 @@ Don't overtrain the player
         player.training = pick_training()
         my_players_training.append(player.training)
         print("you choosed:--> ", player.training, "\n")
-        time.sleep(1.5)
+        time.sleep(1.2)
         clrscr()
 
 
@@ -343,7 +334,7 @@ def player_nutrition_score():
         else:
             i.nutrition_score = randint(80, 92)
             nutrition_score = i.nutrition_score
-
+    
     return nutrition_score
 
 

@@ -1,7 +1,6 @@
 import re
 
 
-
 class Player:
     """
     Class that creates players based
