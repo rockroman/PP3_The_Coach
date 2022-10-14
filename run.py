@@ -1,6 +1,5 @@
 from random import randint
 import click
-# from validate import slow_print, display_menu, program_title 
 import validate as valid
 from player import Player
 import requests
@@ -26,19 +25,24 @@ def start_coach():
     show_table1()
     get_player_trained()
     clrscr()
-    # valid.slow_print("Your team Values")
-    # show_table2()
     player_train_value()
     get_player_meal()
     clrscr()
     player_nutrition_value()
+    clrscr()
+    valid.slow_print("Please wait until Score is calculated ")
     player_nutrition_score()
+    # start = time.time()
     insert_rows2(my_players)
     show_table2()
+    start = time.time()
     for i in my_players:
         overall_player_score(i)
     team_preformance_score()
-   
+    end = time.time()
+    tota_time = end - start
+    print(tota_time)
+
 
 def welcome():
     """
@@ -63,7 +67,7 @@ ARE YOU READY?
         """
     # slow_print(line2)
     print(line2)
-    time.sleep(1)
+    time.sleep(0.5)
     while True:
         try:
             answer = input("1)Proceed\n2)Exit program \n")
@@ -96,8 +100,7 @@ def create_players():
     """
     for i in range(1, 3):
         player = f"player{i}"
-        line = f"Please enter values for player{i}"
-        valid.slow_print(line)
+        valid.slow_print(f"Please enter values for player{i}")
         player = Player()
         my_players.append(player)
         clrscr()
@@ -265,19 +268,18 @@ def get_player_meal():
     food option choosed by User
     """
     for play in my_players:
-        print("please choose " + play.name.upper() + " meals for today")
+        valid.slow_print(f"please choose {play.name.upper()} meals for today:")
         play.meals = pick_food_options()
         time.sleep(0.5)
-        # print("you choosed:-->", play.meals)
         clrscr()
         print("you choosed: ")
         for i in play.meals:
-            print(i)
-
-        player_meals = play.meals
-        print("Calculating player nutrition value...\n")
+            print("->>>", i)
         time.sleep(0.8)
+        player_meals = play.meals
         clrscr()
+        print("Calculating player nutrition value...\n")
+        # clrscr()
 
     return player_meals
 
@@ -315,6 +317,7 @@ def player_nutrition_value():
             i.calorie_value.append(value)
         i.calorie_value = sum(i.calorie_value)
         player_calorie_value = i.calorie_value
+        print(player_calorie_value)
     return player_calorie_value
 
 
@@ -335,14 +338,14 @@ def player_nutrition_score():
         else:
             i.nutrition_score = randint(80, 92)
             nutrition_score = i.nutrition_score
-    
+
     return nutrition_score
 
 
 def overall_player_score(each):
     """
     function tahat calculates overall
-    player score and will be used in loop 
+    player score and will be used in loop
     for each player
     """
     each.overall_score = each.nutrition_score + each.train_value
@@ -358,8 +361,10 @@ def team_preformance_score():
     for i in my_players:
         team_score.append(i.overall_score)
     team_score = sum(team_score)/10
-    print("BASED ON YOUR INPUT AN DECISIONS..\n")
-    print(f"YOUR TEAM PERFOMANCE WOULD BE {team_score}%")
+    # print("BASED ON YOUR INPUT AN DECISIONS..\n")
+    # print(f"YOUR TEAM PERFOMANCE WOULD BE {team_score}%")
+    valid.slow_print("BASED ON YOUR INPUT AN DECISIONS..\n")
+    valid.slow_print(f"YOUR TEAM PERFOMANCE WOULD BE {team_score}%")
 
 
 def main():
