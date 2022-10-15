@@ -115,7 +115,7 @@ def create_players():
     a Player class and appends each player to
     a list of players
     """
-    
+    my_players.clear()
     for i in range(1, 3):
         player = f"player{i}"
         valid.slow_print(f"Please enter values for player{i}")
