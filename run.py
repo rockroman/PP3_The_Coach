@@ -39,9 +39,9 @@ def start_coach():
     for i in my_players:
         overall_player_score(i)
     team_preformance_score()
-   
     total_time = end - start
     print(total_time)
+    end_or_play_again()
 
 
 def welcome():
@@ -83,6 +83,23 @@ ARE YOU READY?
         valid.display_menu()
     elif answer == 2:
         sys.exit()
+
+
+def end_or_play_again():
+    """
+    user can choose to run the program again
+    or exit
+    """
+    valid.slow_print("THANK YOU FOR BEEING 'THE COACH")
+    valid.slow_print("would you like to: ")
+    status = input("1)Go agin\n2)Exit \n")
+    while status not in ("1", "2"):
+        print("Please choose between 1 or 2")
+        status = input("1)Go agin\n2)Exit \n")
+    if status == "1":
+        start_coach()
+    elif status == "2":
+        sys.exit()
     
 
 def clrscr():
@@ -98,6 +115,7 @@ def create_players():
     a Player class and appends each player to
     a list of players
     """
+    
     for i in range(1, 3):
         player = f"player{i}"
         valid.slow_print(f"Please enter values for player{i}")
@@ -124,14 +142,6 @@ def pick_training():
     User can pick training from
     enumerated list
     """
-#     note = """
-# YOU CAN NOW ASSIGN A TRAINING TO EACH PLAYER
-# NOTE! Higher the training number
-# more Value it brings.
-# Don't overtrain the player
-#     """
-#     valid.slow_print(note)
-#     print("here are the training options...\n")
     trainings = [
         'GYM', 'CARDIO', 'SHOOTING', 'BALL_HANDLING', 'DUELING',
         'DRIBLLING', 'DEFENSE_REBOUNDING', 'PICK_N_ROLL', 'PIVOTING']
