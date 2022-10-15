@@ -74,35 +74,3 @@ def show_table2():
 
 def user_score(val):
     WK2.update_value("C1", val)
-
-# user_score('rock')
-
-
-
-# red =['mik', 'po','ytyty', 'iuoiuoiu', 'uiuyiu']
-# cell_range = WK1.range('F2:G7', returnas='matrix')
-# WK1.update_values("F2:G7", values= red)
-# make a variable that holds value of google sheet
-# players values created by user input
-# WK1.update_values
-
-# WK1.update_values('F2:G2', [red])
-# WK1.update_values('A2:B3', [['red'],['io']])
-
-# cell_range1 = WK1.range('A1:F6', returnas='matrix')
-
-# WK1.insert_cols(5, number=1, values=['ACTIVE_met_rate'], inherit=False)
-# WK1.delete_cols(5, number=1)
-# new_list = []
-# def col_list(my_list):
-    
-#     for item in my_list:
-#         new_item = [item]
-#         new_list.append(new_item)
-
-#     return new_list
-
-
-# an = ['2', '4', 't', 'o']
-
-# col_list(an)

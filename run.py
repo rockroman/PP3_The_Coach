@@ -6,7 +6,7 @@ import requests
 import time
 import sys
 from data import insert_rows, insert_rows2,\
-    show_table1, show_table2, user_score
+    show_table1, show_table2, user_score, WK1, WK3
 
 my_players = []
 
@@ -16,6 +16,7 @@ def start_coach():
     Main function that runs
     the game
     """
+   
     valid.program_title()
     create_players()
     player_active_metabolic_rate()
@@ -116,6 +117,8 @@ def create_players():
     a list of players
     """
     my_players.clear()
+    WK1.clear("A2:")
+    WK3.clear("A2:")
     for i in range(1, 3):
         player = f"player{i}"
         valid.slow_print(f"Please enter values for player{i}")

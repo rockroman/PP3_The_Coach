@@ -3,7 +3,7 @@ from time import sleep
 import time
 import sys
 from email_validator import validate_email, EmailNotValidError
-from data import sh
+from data import sh, WK1, WK3
 from run import clrscr
 
 
@@ -115,18 +115,3 @@ def program_title():
     print(' ██║      ██║   ██║ ██╔══██║██║      ██╔══██║')
     print(' ╚██████╗ ╚██████╔╝ ██║  ██║╚██████╗ ██║  ██║')
     print('  ╚═════╝  ╚═════╝  ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝')
-
-
-def end_or_play_again():
-    slow_print("THANK YOU FOR BEEING 'THE COACH")
-    slow_print("would you like to: ")
-    status = input("1)Go agin\n2)Exit \n")
-    while status not in ("1", "2"):
-        print("Please choose between 1 or 2")
-        status = input("1)Go agin\n2)Exit \n")
-    if status == "1":
-        start_coach()
-    elif status == "2":
-        sys.exit()
-       
-
