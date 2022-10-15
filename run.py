@@ -5,7 +5,8 @@ from player import Player
 import requests
 import time
 import sys
-from data import insert_rows, insert_rows2, show_table1, show_table2
+from data import insert_rows, insert_rows2,\
+    show_table1, show_table2, user_score
 
 my_players = []
 
@@ -15,7 +16,6 @@ def start_coach():
     Main function that runs
     the game
     """
-    clrscr()
     valid.program_title()
     create_players()
     player_active_metabolic_rate()
@@ -28,20 +28,20 @@ def start_coach():
     player_train_value()
     get_player_meal()
     clrscr()
+    start = time.time()
     player_nutrition_value()
+    end = time.time()
     clrscr()
     valid.slow_print("Please wait until Score is calculated ")
     player_nutrition_score()
-    # start = time.time()
     insert_rows2(my_players)
     show_table2()
-    start = time.time()
     for i in my_players:
         overall_player_score(i)
     team_preformance_score()
-    end = time.time()
-    tota_time = end - start
-    print(tota_time)
+   
+    total_time = end - start
+    print(total_time)
 
 
 def welcome():
@@ -174,9 +174,10 @@ more Value it brings.
 Don't overtrain the player
     """
     valid.slow_print(note)
-    print("here are the training options...\n")
     for player in my_players:
-        print("pick a training option for", player.name.upper())
+        print("here are the training options...\n")
+        line = (f"pick a training option for,{player.name.upper()}")
+        valid.slow_print(line)
         player.training = pick_training()
         my_players_training.append(player.training)
         print("you choosed:--> ", player.training, "\n")
@@ -275,12 +276,11 @@ def get_player_meal():
         print("you choosed: ")
         for i in play.meals:
             print("->>>", i)
-        time.sleep(0.8)
+        time.sleep(1.5)
         player_meals = play.meals
         clrscr()
         print("Calculating player nutrition value...\n")
-        # clrscr()
-
+        
     return player_meals
 
 
@@ -361,17 +361,16 @@ def team_preformance_score():
     for i in my_players:
         team_score.append(i.overall_score)
     team_score = sum(team_score)/10
-    # print("BASED ON YOUR INPUT AN DECISIONS..\n")
-    # print(f"YOUR TEAM PERFOMANCE WOULD BE {team_score}%")
     valid.slow_print("BASED ON YOUR INPUT AN DECISIONS..\n")
     valid.slow_print(f"YOUR TEAM PERFOMANCE WOULD BE {team_score}%")
+    user_score(team_score)
 
 
 def main():
     """
     runs all the functions 
     """
-    # welcome()
+    welcome()
     start_coach()
 
 

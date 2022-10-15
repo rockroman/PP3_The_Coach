@@ -36,7 +36,7 @@ def new_user():
     and moving the new user data into (database)
     google spreadsheet
     """
-    user_row = 1
+    user_row = 0
     while True:
         username = input("Please enter your username: \n ")
         if not re.match(r'^[a-zA-z0-9]{2,12}$', username):
@@ -55,7 +55,7 @@ def new_user():
         break
     WK2.insert_rows(row=user_row, number=1, values=[username, email])
     user_row += 1
-   
+    
 
 def exsisting_user():
     """
@@ -67,12 +67,17 @@ def exsisting_user():
     email = input("Please enter your email address: \n ")
     email_col = WK2.get_col(2)
     username_col = WK2.get_col(1)
-    username_col_data = username_col[1:]
-    email_col_data = email_col[1:]
+    user_score_col = WK2.get_col(3)
+    username_col_data = username_col[0:]
+    email_col_data = email_col[0:]
+    user_score_col_data = user_score_col[0:]
     if email in email_col_data:
         index = email_col_data.index(email)
         print('')
         print(f"Welcome Back {username_col_data[index]}")
+        print(f"Your team percentage last time \
+was {user_score_col_data[index]}")
+        time.sleep(2)
     else:
         print('There is no such a user in database')
         time.sleep(1.5)
@@ -89,54 +94,13 @@ def slow_print(item):
         sys.stdout.write(char)
         sys.stdout.flush()
     print(" ")
-
-
-# def welcome():
-#     """
-#     welcome message and a program description
-#     by using ASCII art 
-#     """
-#     clrscr()
-#     line1 = "   Welcome to     "
-#     slow_print(line1)
-#     program_title()
-#     line2 = """
-# Program that will determine performance
-# percentage of the Team that you created
-# 'The Coach' will give you a chance to create
-# a Team of 5 Basketball players.
-# You will:
-# Assign each player with 3 training options
-# Assign food intake with 3 options for a player
-# The result will be  a percentage how well
-# would your team perform based on your instructions
-# ARE YOU READY?
-#         """
-#     # slow_print(line2)
-#     print(line2)
-#     time.sleep(1)
-#     while True:
-#         try:
-#             answer = input("1)Proceed\n2)Exit program \n")
-#             answer = int(answer)
-#         except ValueError:
-#             print("Please choose between 1 or 2")
-#             continue
-#         if answer > 2 or answer < 1:
-#             print("Please choose between 1 or 2")
-#             continue
-#         break
-#     if answer == 1:
-#         display_menu()
-#     elif answer == 2:
-#         sys.exit()
    
 
 def program_title():
     """
     prints title of programm
     """
-
+    clrscr()
     print('                                  ')
     print('         ████████╗██╗  ██╗███████╗')
     print('         ╚══██╔══╝██║  ██║██╔════╝')
@@ -151,6 +115,5 @@ def program_title():
     print(' ██║      ██║   ██║ ██╔══██║██║      ██╔══██║')
     print(' ╚██████╗ ╚██████╔╝ ██║  ██║╚██████╗ ██║  ██║')
     print('  ╚═════╝  ╚═════╝  ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝')
-
 
 

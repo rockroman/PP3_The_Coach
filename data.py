@@ -10,6 +10,7 @@ gc = pygsheets.authorize(service_account_file=PATH)
 sh = gc.open('players_data')  # Open GoogleSheet
 WK1 = sh[0]
 WK3 = sh[2]
+WK2 = sh[1]
 
 
 def insert_rows(my_list):
@@ -18,7 +19,7 @@ def insert_rows(my_list):
     google sheet with players values
     """
     new_row = []
-    num = 3
+    num = 2
     my_row = 1
     i = 0
     while num > 0:
@@ -41,7 +42,7 @@ def insert_rows2(my_list):
     google sheet with players values
     """
     new_row = []
-    num = 3
+    num = 2
     my_row = 1
     i = 0
     while num > 0:
@@ -69,6 +70,14 @@ def show_table1():
 def show_table2():
     first_table = WK3.range('A1:D6', returnas='matrix')
     print(tabulate(first_table, headers="firstrow", tablefmt="fancy_grid"))
+
+
+def user_score(val):
+    WK2.update_value("C1", val)
+
+# user_score('rock')
+
+
 
 # red =['mik', 'po','ytyty', 'iuoiuoiu', 'uiuyiu']
 # cell_range = WK1.range('F2:G7', returnas='matrix')
