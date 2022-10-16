@@ -118,7 +118,7 @@ def create_players():
     my_players.clear()
     WK1.batch_clear(['A2:E6'])
     WK3.batch_clear(['A2:D6'])
-    for i in range(1, 3):
+    for i in range(1, 6):
         player = f"player{i}"
         val.slow_print(f"Please enter values for player{i}")
         player = Player()
