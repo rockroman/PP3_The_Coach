@@ -4,6 +4,7 @@ operators python library regular exspressions
 can contain both special and ordinary characters
 """
 import re
+from colors import Fore
 
 
 class Player:
@@ -16,7 +17,7 @@ class Player:
             self.name = input("Please input player name: \n ")
             if not re.match(r'^[a-zA-Z\s]{1,15}$', self.name):
                 print(
-                    'Name can be 15 characters long and contain'
+                    Fore.RED + 'Name can be 15 characters long and contain'
                     ' only letters')
                 continue
             break
@@ -27,10 +28,10 @@ class Player:
                         "(values should be between 18-38): \n")
                 self.age = int(self.age)
             except ValueError:
-                print('Please use numeric digits.')
+                print(Fore.RED + 'Please use numeric digits.')
                 continue
             if self.age < 18 or self.age > 38:
-                print('Please enter value in range from 18 to 38')
+                print(Fore.RED + 'Please enter value in range from 18 to 38')
                 continue
             break
         while True:
@@ -40,10 +41,11 @@ class Player:
                     "(values should be between 160-230cm): \n ")
                 self.height = int(self.height)
             except ValueError:
-                print('Please use numeric digits.')
+                print(Fore.RED + 'Please use numeric digits.')
                 continue
             if self.height < 160 or self.height > 230:
-                print('Please enter value in range from 160 to 230cm')
+                print(Fore.RED + 'Please enter value in range\
+ from 160 to 230cm')
                 continue
             break
         while True:
@@ -53,10 +55,11 @@ class Player:
                         "(values should be between 60-130kg): \n ")
                 self.weight = int(self.weight)
             except ValueError:
-                print('Please use numeric digits.')
+                print(Fore.RED + 'Please use numeric digits.')
                 continue
             if self.weight < 60 or self.weight > 130:
-                print('Please enter value in range from 60 to 130kg')
+                print(Fore.RED + 'Please enter value in range\
+ from 60 to 130kg')
                 continue
             break
 

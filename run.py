@@ -11,6 +11,8 @@ import sys
 from data import insert_rows, WK1, show_table1, show_table2,\
         user_score, insert_rows2, WK3
 
+from colors import Fore
+
 
 my_players = []
 
@@ -32,7 +34,7 @@ def start_coach():
     player_train_value()
     get_player_meal()
     clrscr()
-    print("Your result will be ready in 15 seconds")
+    print(Fore.GREEN + "Your result will be ready in 15 seconds")
     player_nutrition_value()
     clrscr()
     val.slow_print("Please wait until Score is calculated ")
@@ -53,6 +55,7 @@ def welcome():
     clrscr()
     line1 = "   Welcome to     "
     val.slow_print(line1)
+    time.sleep(1.5)
     val.program_title()
     line2 = """
 Program that will determine performance
@@ -73,10 +76,10 @@ ARE YOU READY?
             answer = input("1)Proceed\n2)Exit program \n")
             answer = int(answer)
         except ValueError:
-            print("Please choose between 1 or 2")
+            print(Fore.RED + "Please choose between 1 or 2")
             continue
         if answer > 2 or answer < 1:
-            print("Please choose between 1 or 2")
+            print(Fore.RED + "Please choose between 1 or 2")
             continue
         break
     if answer == 1:
@@ -95,7 +98,7 @@ def end_or_play_again():
     status = input("1)Go agin\n2)Exit \n")
     while status not in ("1", "2"):
         print("Please choose between 1 or 2")
-        status = input("1)Go agin\n2)Exit \n")
+        status = input(Fore.GREEN + "1)Go agin\n", Fore.RED + "2)Exit \n")
     if status == "1":
         start_coach()
     elif status == "2":
@@ -118,7 +121,7 @@ def create_players():
     my_players.clear()
     WK1.batch_clear(['A2:E6'])
     WK3.batch_clear(['A2:D6'])
-    for i in range(1, 6):
+    for i in range(1, 3):
         player = f"player{i}"
         val.slow_print(f"Please enter values for player{i}")
         player = Player()
@@ -157,10 +160,11 @@ def pick_training():
                 chosed = input('choose training number: \n ')
                 chosed = int(chosed)
             except ValueError:
-                print("Please choose numeric digits")
+                print(Fore.RED + "Please choose numeric digits")
                 continue
             if chosed < 0 or chosed > len(trainings)-1:
-                print("please choose only number assigned to trainings")
+                print(Fore.RED + "please choose only number\
+ assigned to trainings")
                 continue
             break
         chosed_training.append(trainings[chosed])
@@ -263,10 +267,10 @@ def pick_food_options():
                 chosed = input('choose meal number: \n ')
                 chosed = int(chosed)
             except ValueError:
-                print("Please choose numeric digits")
+                print(Fore.RED + "Please choose numeric digits")
                 continue
             if chosed < 0 or chosed > len(menu)-1:
-                print("please choose only number assigned to meal")
+                print(Fore.RED + "please choose only number assigned to meal")
                 continue
             break
         chosed_meals.append(menu[chosed])
@@ -374,7 +378,7 @@ def team_preformance_score():
         team_score.append(i.overall_score)
     team_score = sum(team_score)/10
     val.slow_print("BASED ON YOUR INPUT AN DECISIONS..\n")
-    val.slow_print(f"YOUR TEAM PERFOMANCE WOULD BE {team_score}%")
+    print(Fore.GREEN + f"YOUR TEAM PERFOMANCE WOULD BE {team_score}%")
     user_score(team_score)
 
 
