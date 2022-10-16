@@ -1,18 +1,31 @@
-"""
-A simple, intuitive python library to access google spreadsheets
-through the Google Sheets API v4
-"""
-import pygsheets
-from tabulate import tabulate
+# """
+# A simple, intuitive python library to access google spreadsheets
+# through the Google Sheets API v4
+# """
+# import pygsheets
+# from tabulate import tabulate
 
-# code taken from official pygsheets docs
-PATH = '/workspace/PP3_The_Coach/creds.json'
-gc = pygsheets.authorize(service_file=PATH)
-gc = pygsheets.authorize(service_account_file=PATH)
-sh = gc.open('players_data')  # Open GoogleSheet
-WK1 = sh[0]
-WK3 = sh[2]
-WK2 = sh[1]
+# # code taken from official pygsheets docs
+# PATH = '/workspace/PP3_The_Coach/creds.json'
+# gc = pygsheets.authorize(service_file=PATH)
+# gc = pygsheets.authorize(service_account_file=PATH)
+# sh = gc.open('players_data')  # Open GoogleSheet
+# WK1 = sh[0]
+# WK3 = sh[2]
+# WK2 = sh[1]
+import gspread
+from google.oauth2.service_account import Credentials
+
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('love_sandwiches')
 
 
 def insert_rows(my_list):
