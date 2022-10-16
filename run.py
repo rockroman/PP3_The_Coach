@@ -3,7 +3,7 @@ random variable generator
 """
 from random import randint
 import click
-import validate as valid
+import validate as val
 from player import Player
 import requests
 import time
@@ -19,12 +19,12 @@ def start_coach():
     Main function that runs
     the game
     """
-    valid.program_title()
+    val.program_title()
     create_players()
     player_active_metabolic_rate()
     insert_rows(my_players)
     clrscr()
-    valid.slow_print("Here is your Team")
+    val.slow_print("Here is your Team")
     show_table1()
     get_player_trained()
     clrscr()
@@ -34,7 +34,7 @@ def start_coach():
     print("Your result will be ready in 15 seconds")
     player_nutrition_value()
     clrscr()
-    valid.slow_print("Please wait until Score is calculated ")
+    val.slow_print("Please wait until Score is calculated ")
     player_nutrition_score()
     insert_rows2(my_players)
     show_table2()
@@ -51,8 +51,8 @@ def welcome():
     """
     clrscr()
     line1 = "   Welcome to     "
-    valid.slow_print(line1)
-    valid.program_title()
+    val.slow_print(line1)
+    val.program_title()
     line2 = """
 Program that will determine performance
 percentage of the Team that you created
@@ -65,8 +65,7 @@ The result will be  a percentage how well
 would your team perform based on your instructions
 ARE YOU READY?
         """
-    valid.slow_print(line2)
-    print(line2)
+    val.slow_print(line2)
     time.sleep(0.5)
     while True:
         try:
@@ -80,7 +79,7 @@ ARE YOU READY?
             continue
         break
     if answer == 1:
-        valid.display_menu()
+        val.display_menu()
     elif answer == 2:
         sys.exit()
 
@@ -90,8 +89,8 @@ def end_or_play_again():
     user can choose to run the program again
     or exit
     """
-    valid.slow_print("THANK YOU FOR BEEING 'THE COACH")
-    valid.slow_print("would you like to: ")
+    val.slow_print("THANK YOU FOR BEEING 'THE COACH")
+    val.slow_print("would you like to: ")
     status = input("1)Go agin\n2)Exit \n")
     while status not in ("1", "2"):
         print("Please choose between 1 or 2")
@@ -120,11 +119,11 @@ def create_players():
     WK3.clear("A2:")
     for i in range(1, 6):
         player = f"player{i}"
-        valid.slow_print(f"Please enter values for player{i}")
+        val.slow_print(f"Please enter values for player{i}")
         player = Player()
         my_players.append(player)
         clrscr()
-        valid.program_title()
+        val.program_title()
 
 
 def player_active_metabolic_rate():
@@ -185,11 +184,11 @@ NOTE! Higher the training number
 more Value it brings.
 Don't overtrain the player
     """
-    valid.slow_print(note)
+    val.slow_print(note)
     for player in my_players:
         print("here are the training options...\n")
         line = (f"pick a training option for,{player.name.upper()}")
-        valid.slow_print(line)
+        val.slow_print(line)
         player.training = pick_training()
         my_players_training.append(player.training)
         print("you choosed:--> ", player.training, "\n")
@@ -281,7 +280,7 @@ def get_player_meal():
     food option choosed by User
     """
     for play in my_players:
-        valid.slow_print(f"please choose {play.name.upper()} meals for today:")
+        val.slow_print(f"please choose {play.name.upper()} meals for today:")
         play.meals = pick_food_options()
         time.sleep(0.5)
         clrscr()
@@ -373,8 +372,8 @@ def team_preformance_score():
     for i in my_players:
         team_score.append(i.overall_score)
     team_score = sum(team_score)/10
-    valid.slow_print("BASED ON YOUR INPUT AN DECISIONS..\n")
-    valid.slow_print(f"YOUR TEAM PERFOMANCE WOULD BE {team_score}%")
+    val.slow_print("BASED ON YOUR INPUT AN DECISIONS..\n")
+    val.slow_print(f"YOUR TEAM PERFOMANCE WOULD BE {team_score}%")
     user_score(team_score)
 
 
