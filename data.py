@@ -27,7 +27,7 @@ def insert_rows(my_list):
     """
     print('Please wait while your team is created')
     new_row = []
-    num = 2
+    num = 5
     i = 0
     while num > 0:
         each = my_list[i]
@@ -48,7 +48,7 @@ def insert_rows2(my_list):
     google sheet with players values
     """
     new_row = []
-    num = 2
+    num = 5
     i = 0
     while num > 0:
         each = my_list[i]

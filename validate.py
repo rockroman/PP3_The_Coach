@@ -72,7 +72,7 @@ def exsisting_user():
         username = username_col_data[index]
         new_mail = email_col_data[index]
         print('')
-        print(f"Welcome Back {username_col_data[index]}")
+        print(f"{Fore.GREEN}" + f"Welcome Back {username_col_data[index]}")
         print(f"Your team percentage last time \
 was {user_score_col_data[index]}")
         WK2.insert_row([username, new_mail], index=1)

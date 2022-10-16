@@ -55,7 +55,7 @@ def welcome():
     clrscr()
     line1 = "   Welcome to     "
     val.slow_print(line1)
-    time.sleep(1.5)
+    time.sleep(0.5)
     val.program_title()
     line2 = """
 Program that will determine performance
@@ -70,10 +70,11 @@ would your team perform based on your instructions
 ARE YOU READY?
         """
     val.slow_print(line2)
-    time.sleep(0.5)
+    time.sleep(1)
     while True:
         try:
-            answer = input("1)Proceed\n2)Exit program \n")
+            answer = input(
+                f"{Fore.GREEN}"+"1)Proceed\n"f"{Fore.RED}"+"2)Exit program \n")
             answer = int(answer)
         except ValueError:
             print(Fore.RED + "Please choose between 1 or 2")
@@ -95,10 +96,12 @@ def end_or_play_again():
     """
     val.slow_print("THANK YOU FOR BEEING 'THE COACH")
     val.slow_print("would you like to: ")
-    status = input("1)Go agin\n2)Exit \n")
+    status = input(
+            f'{Fore.GREEN}' + "1)Go again\n" + f"{Fore.RED}" + "2)Exit \n")
     while status not in ("1", "2"):
         print("Please choose between 1 or 2")
-        status = input(Fore.GREEN + "1)Go agin\n", Fore.RED + "2)Exit \n")
+        status = input(
+            f'{Fore.GREEN}' + "1)Go again\n" + f"{Fore.RED}" + "2)Exit \n")
     if status == "1":
         start_coach()
     elif status == "2":
@@ -121,7 +124,7 @@ def create_players():
     my_players.clear()
     WK1.batch_clear(['A2:E6'])
     WK3.batch_clear(['A2:D6'])
-    for i in range(1, 3):
+    for i in range(1, 6):
         player = f"player{i}"
         val.slow_print(f"Please enter values for player{i}")
         player = Player()
@@ -194,6 +197,7 @@ Don't overtrain the player
         print("here are the training options...\n")
         line = (f"pick a training option for,{player.name.upper()}")
         val.slow_print(line)
+        print('#######################################')
         player.training = pick_training()
         my_players_training.append(player.training)
         print("you choosed:--> ", player.training, "\n")
@@ -286,6 +290,7 @@ def get_player_meal():
     """
     for play in my_players:
         val.slow_print(f"please choose {play.name.upper()} meals for today:")
+        print('#######################################')
         play.meals = pick_food_options()
         time.sleep(0.5)
         clrscr()
