@@ -3,7 +3,7 @@ from time import sleep
 import time
 import sys
 from email_validator import validate_email, EmailNotValidError
-from data import sh, WK1, WK3
+from data import sh
 from run import clrscr
 
 
@@ -14,7 +14,7 @@ USER_DATA = []
 def display_menu():
     """
     Start menu that directs the user wether
-    a new or existing option is chosen 
+    a new or existing option is chosen
     """
     clrscr()
     program_title()
@@ -27,11 +27,11 @@ def display_menu():
         new_user()
     elif status == "b":
         exsisting_user()
-       
- 
+
+
 def new_user():
     """
-    Creating a new user based on username and 
+    Creating a new user based on username and
     email, validating that inputs are within parameters
     and moving the new user data into (database)
     google spreadsheet
@@ -55,7 +55,7 @@ def new_user():
         break
     WK2.insert_rows(row=user_row, number=1, values=[username, email])
     user_row += 1
-    
+
 
 def exsisting_user():
     """
@@ -94,7 +94,7 @@ def slow_print(item):
         sys.stdout.write(char)
         sys.stdout.flush()
     print(" ")
-   
+
 
 def program_title():
     """

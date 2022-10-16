@@ -1,3 +1,6 @@
+"""
+random variable generator
+"""
 from random import randint
 import click
 import validate as valid
@@ -16,7 +19,6 @@ def start_coach():
     Main function that runs
     the game
     """
-   
     valid.program_title()
     create_players()
     player_active_metabolic_rate()
@@ -29,9 +31,8 @@ def start_coach():
     player_train_value()
     get_player_meal()
     clrscr()
-    start = time.time()
+    print("Your result will be ready in 15 seconds")
     player_nutrition_value()
-    end = time.time()
     clrscr()
     valid.slow_print("Please wait until Score is calculated ")
     player_nutrition_score()
@@ -40,15 +41,13 @@ def start_coach():
     for i in my_players:
         overall_player_score(i)
     team_preformance_score()
-    total_time = end - start
-    print(total_time)
     end_or_play_again()
 
 
 def welcome():
     """
     welcome message and a program description
-    by using ASCII art 
+    by using ASCII art
     """
     clrscr()
     line1 = "   Welcome to     "
@@ -66,7 +65,7 @@ The result will be  a percentage how well
 would your team perform based on your instructions
 ARE YOU READY?
         """
-    # slow_print(line2)
+    valid.slow_print(line2)
     print(line2)
     time.sleep(0.5)
     while True:
@@ -101,7 +100,7 @@ def end_or_play_again():
         start_coach()
     elif status == "2":
         sys.exit()
-    
+
 
 def clrscr():
     """
@@ -119,14 +118,14 @@ def create_players():
     my_players.clear()
     WK1.clear("A2:")
     WK3.clear("A2:")
-    for i in range(1, 3):
+    for i in range(1, 6):
         player = f"player{i}"
         valid.slow_print(f"Please enter values for player{i}")
         player = Player()
         my_players.append(player)
         clrscr()
         valid.program_title()
-        
+
 
 def player_active_metabolic_rate():
     """
@@ -267,7 +266,7 @@ def pick_food_options():
                 print("Please choose numeric digits")
                 continue
             if chosed < 0 or chosed > len(menu)-1:
-                print("please choose only number assigned to meal")        
+                print("please choose only number assigned to meal")
                 continue
             break
         chosed_meals.append(menu[chosed])
@@ -278,7 +277,7 @@ def pick_food_options():
 
 def get_player_meal():
     """
-    function assigns each player with 
+    function assigns each player with
     food option choosed by User
     """
     for play in my_players:
@@ -293,7 +292,7 @@ def get_player_meal():
         player_meals = play.meals
         clrscr()
         print("Calculating player nutrition value...\n")
-        
+
     return player_meals
 
 
@@ -320,7 +319,7 @@ def get_meal_value(meal):
 
 def player_nutrition_value():
     """
-    function that sums caloric value of all meals 
+    function that sums caloric value of all meals
     assigned to each player by using a callback function
     """
     for i in my_players:
@@ -330,13 +329,13 @@ def player_nutrition_value():
             i.calorie_value.append(value)
         i.calorie_value = sum(i.calorie_value)
         player_calorie_value = i.calorie_value
-        print(player_calorie_value)
+
     return player_calorie_value
 
 
 def player_nutrition_score():
     """
-    function that compares active metabolic rate of player 
+    function that compares active metabolic rate of player
     with caloric value of food intake and assignes nutrition score to
     player adjusting it in case of too many calories taken and
     if insuficient calories are taken
@@ -381,7 +380,7 @@ def team_preformance_score():
 
 def main():
     """
-    runs all the functions 
+    runs all the functions
     """
     welcome()
     start_coach()

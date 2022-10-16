@@ -1,3 +1,8 @@
+"""
+regular expression mathcing
+operators python library regular exspressions
+can contain both special and ordinary characters
+"""
 import re
 
 
@@ -63,9 +68,5 @@ class Player:
         """
         bmr = 66.5 + \
             (13.75 * self.weight) + (5.003 * self.height) - (6.75 * self.age)
-        
+
         return round(bmr)
-
-
-
-
