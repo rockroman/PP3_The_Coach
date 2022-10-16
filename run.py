@@ -10,7 +10,9 @@ import time
 import sys
 # from data import insert_rows, insert_rows2,\
 #     show_table1, show_table2, user_score, WK1, WK3
-from data import insert_rows, WK1
+from data import insert_rows, WK1, show_table1, show_table2,\
+        user_score, insert_rows2, WK3
+
 
 my_players = []
 
@@ -25,23 +27,23 @@ def start_coach():
     player_active_metabolic_rate()
     insert_rows(my_players)
     clrscr()
-    # val.slow_print("Here is your Team")
-    # # show_table1()
-    # get_player_trained()
-    # clrscr()
-    # player_train_value()
-    # get_player_meal()
-    # clrscr()
-    # print("Your result will be ready in 15 seconds")
-    # player_nutrition_value()
-    # clrscr()
-    # val.slow_print("Please wait until Score is calculated ")
-    # player_nutrition_score()
-    # insert_rows2(my_players)
-    # show_table2()
-    # for i in my_players:
-    #     overall_player_score(i)
-    # team_preformance_score()
+    val.slow_print("Here is your Team")
+    show_table1()
+    get_player_trained()
+    clrscr()
+    player_train_value()
+    get_player_meal()
+    clrscr()
+    print("Your result will be ready in 15 seconds")
+    player_nutrition_value()
+    clrscr()
+    val.slow_print("Please wait until Score is calculated ")
+    player_nutrition_score()
+    insert_rows2(my_players)
+    show_table2()
+    for i in my_players:
+        overall_player_score(i)
+    team_preformance_score()
     # end_or_play_again()
 
 
@@ -116,9 +118,9 @@ def create_players():
     a list of players
     """
     my_players.clear()
-    # WK1.clear("A2:")
-    # WK3.clear("A2:")
-    for i in range(1, 6):
+    WK1.batch_clear(['A2:E6'])
+    WK3.batch_clear(['A2:D6'])
+    for i in range(1, 3):
         player = f"player{i}"
         val.slow_print(f"Please enter values for player{i}")
         player = Player()

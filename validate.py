@@ -53,7 +53,7 @@ def new_user():
             print(str(err))
             continue
         break
-    WK2.insert_rows(row=user_row, number=1, values=[username, email])
+    WK2.insert_row([username, email], index=2)
     user_row += 1
 
 
