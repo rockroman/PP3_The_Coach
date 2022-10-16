@@ -1,22 +1,9 @@
-# """
-# A simple, intuitive python library to access google spreadsheets
-# through the Google Sheets API v4
-# """
-# import pygsheets
-
-
-# # code taken from official pygsheets docs
-# PATH = '/workspace/PP3_The_Coach/creds.json'
-# gc = pygsheets.authorize(service_file=PATH)
-# gc = pygsheets.authorize(service_account_file=PATH)
-# sh = gc.open('players_data')  # Open GoogleSheet
-# WK1 = sh[0]
-# WK3 = sh[2]
-# WK2 = sh[1]
 import gspread
 from google.oauth2.service_account import Credentials
 from tabulate import tabulate
 
+# code taken from love_sandwiches walk-through project
+# by Code Institute
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -40,7 +27,7 @@ def insert_rows(my_list):
     """
     print('Please wait while your team is created')
     new_row = []
-    num = 2
+    num = 5
     i = 0
     while num > 0:
         each = my_list[i]
@@ -61,7 +48,7 @@ def insert_rows2(my_list):
     google sheet with players values
     """
     new_row = []
-    num = 2
+    num = 5
     i = 0
     while num > 0:
         each = my_list[i]
@@ -82,7 +69,7 @@ def show_table1():
     """
     first_table = WK1.get("A1:E6")
     print(tabulate(first_table, headers="firstrow", tablefmt="fancy_grid"))
-    
+
 
 def show_table2():
     """
@@ -115,6 +102,23 @@ def user_score(val):
 
 # WK1.insert_row(['trytryrytr'], index=2)
 # -------old code
+# """
+# A simple, intuitive python library to access google spreadsheets
+# through the Google Sheets API v4
+# """
+# import pygsheets
+
+
+# # code taken from official pygsheets docs
+# PATH = '/workspace/PP3_The_Coach/creds.json'
+# gc = pygsheets.authorize(service_file=PATH)
+# gc = pygsheets.authorize(service_account_file=PATH)
+# sh = gc.open('players_data')  # Open GoogleSheet
+# WK1 = sh[0]
+# WK3 = sh[2]
+# WK2 = sh[1]
+
+
 # def insert_rows(my_list):
 #     """
 #     function that populates

@@ -8,8 +8,6 @@ from player import Player
 import requests
 import time
 import sys
-# from data import insert_rows, insert_rows2,\
-#     show_table1, show_table2, user_score, WK1, WK3
 from data import insert_rows, WK1, show_table1, show_table2,\
         user_score, insert_rows2, WK3
 
@@ -44,7 +42,7 @@ def start_coach():
     for i in my_players:
         overall_player_score(i)
     team_preformance_score()
-    # end_or_play_again()
+    end_or_play_again()
 
 
 def welcome():
@@ -384,7 +382,7 @@ def main():
     """
     runs all the functions
     """
-    # welcome()
+    welcome()
     start_coach()
 
 
