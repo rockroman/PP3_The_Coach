@@ -6,7 +6,9 @@ import pygsheets
 from tabulate import tabulate
 
 # code taken from official pygsheets docs
-PATH = '//workspace//PP3_The_Coach//creds.json'
+PATH = '/workspace/PP3_The_Coach/creds.json'
+gc = pygsheets.authorize(service_file=PATH)
+
 gc = pygsheets.authorize(service_account_file=PATH)
 sh = gc.open('players_data')  # Open GoogleSheet
 WK1 = sh[0]
