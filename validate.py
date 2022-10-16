@@ -3,11 +3,11 @@ from time import sleep
 import time
 import sys
 from email_validator import validate_email, EmailNotValidError
-from data import sh
+from data import SHEET
 from run import clrscr
 
 
-WK2 = sh[1]
+WK2 = SHEET.worksheet('users')
 USER_DATA = []
 
 

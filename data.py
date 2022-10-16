@@ -33,6 +33,28 @@ WK2 = SHEET.worksheet('users')
 WK3 = SHEET.worksheet('final_data')
 
 
+def insert_rows(my_list):
+    """
+    function that populates
+    google sheet with players values
+    """
+    print('Please wait while your team is created')
+    new_row = []
+    num = 5
+    i = 0
+    while num > 0:
+        each = my_list[i]
+        new_row.append(each.name)
+        new_row.append(each.age)
+        new_row.append(each.height)
+        new_row.append(each.weight)
+        new_row.append(each.active_m_r)
+        WK1.append_row(new_row)
+        num -= 1
+        new_row = []
+        i += 1
+
+
 # def insert_rows(my_list):
 #     """
 #     function that populates
@@ -103,3 +125,60 @@ WK3 = SHEET.worksheet('final_data')
 #     team performance score in google spreadsheet
 #     """
 #     WK2.update_value("C1", val)
+
+
+def insert_rows(my_list):
+    """
+    function that populates
+    google sheet with players values
+    """
+    print('Please wait while your team is created')
+    new_row = []
+    num = 5
+    i = 0
+    while num > 0:
+        each = my_list[i]
+        new_row.append(each.name)
+        new_row.append(each.age)
+        new_row.append(each.height)
+        new_row.append(each.weight)
+        new_row.append(each.active_m_r)
+        WK1.append_row(new_row)
+        num -= 1
+        new_row = []
+        i += 1
+       
+# my_row = ['23223','ererer','rer']
+
+
+# def insert_r(x):
+#     for i in range(1,5):
+#         WK1.append_row(x)
+
+
+# insert_r(my_row)
+
+
+# -------old code
+# def insert_rows(my_list):
+#     """
+#     function that populates
+#     google sheet with players values
+#     """
+#     print('Please wait while your team is created')
+#     new_row = []
+#     num = 5
+#     my_row = 1
+#     i = 0
+#     while num > 0:
+#         each = my_list[i]
+#         new_row.append(each.name)
+#         new_row.append(each.age)
+#         new_row.append(each.height)
+#         new_row.append(each.weight)
+#         new_row.append(each.active_m_r)
+#         WK1.insert_rows(row=my_row, number=1, values=new_row)
+#         num -= 1
+#         new_row = []
+#         i += 1
+#         my_row += 1
