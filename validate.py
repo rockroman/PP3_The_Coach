@@ -23,11 +23,13 @@ def display_menu():
     status = input("a)New User\nb)Exsisting user \n")
     while status not in ("a", "b"):
         print(Fore.RED + "Please choose between a or b")
-        status = input("a)New User\nb)Exsisting user \n")
+        status = input("a)New User\nb)Existing user \n")
     if status == "a":
         new_user()
     elif status == "b":
         exsisting_user()
+
+    return status
 
 
 def new_user():
@@ -54,6 +56,7 @@ def new_user():
             continue
         break
     WK2.insert_row([username, email], index=1)
+    
 
 
 def exsisting_user():
@@ -116,4 +119,3 @@ def program_title():
     print(Fore.BLUE + '  ╚═════╝  ╚═════╝  ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝')
     print('###############################################')
     print('###############################################')
-

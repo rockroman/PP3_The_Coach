@@ -195,7 +195,7 @@ Don't overtrain the player
     val.slow_print(note)
     for player in my_players:
         print("here are the training options...\n")
-        line = (f"pick a training option for,{player.name.upper()}")
+        line = (f"pick 3 training option for,{player.name.upper()}")
         val.slow_print(line)
         print('#######################################')
         player.training = pick_training()
