@@ -56,7 +56,6 @@ def new_user():
             continue
         break
     WK2.insert_row([username, email], index=1)
-    
 
 
 def exsisting_user():
@@ -79,7 +78,7 @@ def exsisting_user():
         print(f"Your team percentage last time \
 was {user_score_col_data[index]}")
         WK2.insert_row([username, new_mail], index=1)
-        time.sleep(2)
+        time.sleep(2.5)
     else:
         print(Fore.RED + 'There is no such a user in database')
         time.sleep(1.5)

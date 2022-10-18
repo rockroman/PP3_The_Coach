@@ -55,7 +55,7 @@ def welcome():
     clrscr()
     line1 = "   Welcome to     "
     val.slow_print(line1)
-    time.sleep(0.5)
+    time.sleep(1.2)
     val.program_title()
     line2 = """
 Program that will determine performance
@@ -64,8 +64,10 @@ percentage of the Team that you created
 a Team of 5 Basketball players.
 You will:
 Assign each player with 3 training options
+(Each training option has VALUE)
 Assign food intake with 3 options for a player
-The result will be  a percentage how well
+(Each Meal option has VALUE)
+The result will be a percentage how well
 would your team perform based on your instructions
 ARE YOU READY?
         """
@@ -74,7 +76,8 @@ ARE YOU READY?
     while True:
         try:
             answer = input(
-                f"{Fore.GREEN}"+"1)Proceed\n"f"{Fore.RED}"+"2)Exit program \n")
+                f"{Fore.GREEN}"+"1)Proceed\n"f"{Fore.RED}"+"2)Exit program \n"
+                f"{Fore.WHITE}")
             answer = int(answer)
         except ValueError:
             print(Fore.RED + "Please choose between 1 or 2")
@@ -97,11 +100,13 @@ def end_or_play_again():
     val.slow_print("THANK YOU FOR BEEING 'THE COACH")
     val.slow_print("would you like to: ")
     status = input(
-            f'{Fore.GREEN}' + "1)Go again\n" + f"{Fore.RED}" + "2)Exit \n")
+            f'{Fore.GREEN}' + "1)Go again\n" + f"{Fore.RED}" + "2)Exit \n"
+            f"{Fore.WHITE}")
     while status not in ("1", "2"):
         print("Please choose between 1 or 2")
         status = input(
-            f'{Fore.GREEN}' + "1)Go again\n" + f"{Fore.RED}" + "2)Exit \n")
+            f'{Fore.GREEN}' + "1)Go again\n" + f"{Fore.RED}" + "2)Exit \n"
+            f"{Fore.WHITE}")
     if status == "1":
         start_coach()
     elif status == "2":
