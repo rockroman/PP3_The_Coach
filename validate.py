@@ -12,7 +12,7 @@ WK2 = SHEET.worksheet('users')
 USER_DATA = []
 
 
-def display_menu():
+def display_menu() -> str:
     """
     Start menu that directs the user wether
     a new or existing option is chosen
@@ -32,7 +32,7 @@ def display_menu():
     return status
 
 
-def new_user():
+def new_user() -> None:
     """
     Creating a new user based on username and
     email, validating that inputs are within parameters
@@ -58,7 +58,7 @@ def new_user():
     WK2.insert_row([username, email], index=1)
 
 
-def exsisting_user():
+def exsisting_user() -> None:
     """
     Checks if the user email is in google spreadsheet
     (database) and if is retrieves username and greats the user
@@ -85,7 +85,7 @@ was {user_score_col_data[index]}")
         display_menu()
 
 
-def slow_print(item):
+def slow_print(item: str):
     """
     prints the message letter by letter
     with specified time delay

@@ -1,6 +1,8 @@
+from typing import List
 import gspread
 from google.oauth2.service_account import Credentials
 from tabulate import tabulate
+
 
 # code taken from love_sandwiches walk-through project
 # by Code Institute
@@ -20,7 +22,7 @@ WK2 = SHEET.worksheet('users')
 WK3 = SHEET.worksheet('final_data')
 
 
-def insert_rows(my_list):
+def insert_rows(my_list: List[str]) -> None:
     """
     function that populates
     google sheet with players values
@@ -42,7 +44,7 @@ def insert_rows(my_list):
         i += 1
 
 
-def insert_rows2(my_list):
+def insert_rows2(my_list: List[str]) -> None:
     """
     function that populates
     google sheet with players values
@@ -62,7 +64,7 @@ def insert_rows2(my_list):
         i += 1
 
 
-def show_table1():
+def show_table1() -> None:
     """
     Making a table with starting player values
     based on user inputs
@@ -71,7 +73,7 @@ def show_table1():
     print(tabulate(first_table, headers="firstrow", tablefmt="fancy_grid"))
 
 
-def show_table2():
+def show_table2() -> None:
     """
     Making a table with final player values
     based on user inputs and calculations
@@ -80,9 +82,10 @@ def show_table2():
     print(tabulate(first_table, headers="firstrow", tablefmt="fancy_grid"))
 
 
-def user_score(val):
+def user_score(val: int) -> int:
     """
     append or update users
     team performance score in google spreadsheet
     """
     WK2.update("C1", val)
+    return val
