@@ -1,20 +1,30 @@
-# import unittest
-# from unittest.mock import patch
+import unittest
+from validate import display_menu
 
-# from validate import display_menu,new_user
 
-# 
-# class TestValidate(unittest.TestCase):
+# class TestDisplayMenu(unittest.TestCase):
 #     """
-#     test does user input is 
+#     testing  for user input   
 #     between two options offered
 #     """
-#     def test_a(self):
-#         input = __builtins__.input
-#         __builtins__.input = lambda _: 'a'
-#         self.assertTrue('please enter your username')
-    
+#     def test_display_menu_good_input(self):
+#         actual_input = 'b'
+#         expected_input = ('a', 'b')
+#         self.assertIn(actual_input, expected_input)
+
+#     def test_display_menu_another_good_input(self):
+#         actual_input = 'a'
+#         expected_input = ('a', 'b')
+#         self.assertIn(actual_input, expected_input)
+
+#     def test_display_menu_another_invalid_input(self):
+#         actual_input = 2
+#         expected_input = ('a', 'b')
+#         self.assertNotIn(actual_input, expected_input)
+
+# ----up working-----
 
 
-# if __name__ == '__main__':
-#     unittest.main()
+
+if __name__ == '__main__':
+    unittest.main()

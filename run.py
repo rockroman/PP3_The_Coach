@@ -161,12 +161,16 @@ def pick_training() -> List[str]:
         'DRIBLLING', 'DEFENSE_REBOUNDING', 'PICK_N_ROLL', 'PIVOTING']
     for i, j in enumerate(trainings):
         print(i, j)
+        print()
     num = 3
+    option = 1
     chosed_training = []
     while num > 0:
         while True:
             try:
-                chosed = input('choose training number: \n ')
+                chosed = input(
+                 f"{Fore.GREEN}" + f"OPTION {option}/3 ""\n"
+                 f"{Fore.WHITE}" + "choose number with  training option: \n ")
                 chosed = int(chosed)
             except ValueError:
                 print(Fore.RED + "Please choose numeric digits")
@@ -178,6 +182,7 @@ def pick_training() -> List[str]:
             break
         chosed_training.append(trainings[chosed])
         num -= 1
+        option += 1
 
     return chosed_training
 
@@ -272,11 +277,14 @@ def pick_food_options() -> List[str]:
         print(i, j)
     num = 3
     print("\n")
+    option = 1
     chosed_meals = []
     while num > 0:
         while True:
             try:
-                chosed = input('choose meal number: \n ')
+                chosed = input(
+                 f"{Fore.GREEN}" + f"OPTION {option}/3""\n"
+                 f"{Fore.WHITE}" + "Choose number assigned to a meal:\n")
                 chosed = int(chosed)
             except ValueError:
                 print(Fore.RED + "Please choose numeric digits")
@@ -287,6 +295,7 @@ def pick_food_options() -> List[str]:
             break
         chosed_meals.append(menu[chosed])
         num -= 1
+        option += 1
 
     return chosed_meals
 
@@ -399,7 +408,7 @@ def main():
     """
     runs all the functions
     """
-    welcome()
+    # welcome()
     start_coach()
 
 
