@@ -12,12 +12,13 @@ from data import insert_rows, WK1, show_table1, show_table2,\
         user_score, insert_rows2, WK3
 
 from colors import Fore
+from typing import List
 
 
 my_players = []
 
 
-def start_coach():
+def start_coach() -> None:
     """
     Main function that runs
     the game
@@ -47,7 +48,7 @@ def start_coach():
     end_or_play_again()
 
 
-def welcome():
+def welcome() -> None:
     """
     welcome message and a program description
     by using ASCII art
@@ -92,7 +93,7 @@ ARE YOU READY?
         sys.exit()
 
 
-def end_or_play_again():
+def end_or_play_again() -> None:
     """
     user can choose to run the program again
     or exit
@@ -113,14 +114,14 @@ def end_or_play_again():
         sys.exit()
 
 
-def clrscr():
+def clrscr() -> None:
     """
     Clear screen using click.clear() function
     """
     click.clear()
 
 
-def create_players():
+def create_players() -> None:
     """
     creates team of players from
     a Player class and appends each player to
@@ -138,7 +139,7 @@ def create_players():
         val.program_title()
 
 
-def player_active_metabolic_rate():
+def player_active_metabolic_rate() -> int:
     """
     Calculating active_metabolic_rate
     for each player from players array
@@ -150,7 +151,7 @@ def player_active_metabolic_rate():
     return amr
 
 
-def pick_training():
+def pick_training() -> List[str]:
     """
     User can pick training from
     enumerated list
@@ -185,7 +186,7 @@ def pick_training():
 my_players_training = []
 
 
-def get_player_trained():
+def get_player_trained() -> None:
     """
     Assigns training option
     to each player and gives
@@ -197,10 +198,11 @@ NOTE! Higher the training number
 more Value it brings.
 Don't overtrain the player
     """
+    num = 1
     val.slow_print(note)
     for player in my_players:
         print("here are the training options...\n")
-        line = (f"pick 3 training option for,{player.name.upper()}")
+        line = (f"Pick 3 training options for,{player.name.upper()}")
         val.slow_print(line)
         print('#######################################')
         player.training = pick_training()
@@ -208,6 +210,7 @@ Don't overtrain the player
         print("you choosed:--> ", player.training, "\n")
         time.sleep(1.2)
         clrscr()
+        num += 1
 
 
 # Variables that will give choosed training strings value
@@ -225,7 +228,7 @@ DEFENSE_REBOUNDING = 40
 PIVOTING = 30
 
 
-def player_train_value():
+def player_train_value() -> int:
     """
     calculating player train value
     based on training choices and
@@ -243,7 +246,7 @@ def player_train_value():
     return player.train_value
 
 
-def pick_food_options():
+def pick_food_options() -> List[str]:
     """
     displays range of meals for user
     to choose for player by enumerating them in order
@@ -288,13 +291,13 @@ def pick_food_options():
     return chosed_meals
 
 
-def get_player_meal():
+def get_player_meal() -> List[str]:
     """
     function assigns each player with
     food option choosed by User
     """
     for play in my_players:
-        val.slow_print(f"please choose {play.name.upper()} meals for today:")
+        val.slow_print(f"please choose 3 meals for {play.name.upper()} today:")
         print('#######################################')
         play.meals = pick_food_options()
         time.sleep(0.5)
@@ -310,7 +313,7 @@ def get_player_meal():
     return player_meals
 
 
-def get_meal_value(meal):
+def get_meal_value(meal: str) -> int:
     """
     Funtion that gets caloric value of meal
     choosed by user by calling "Calorie Ninja API"
@@ -331,7 +334,7 @@ def get_meal_value(meal):
     return round(nut_current)
 
 
-def player_nutrition_value():
+def player_nutrition_value() -> List[str]:
     """
     function that sums caloric value of all meals
     assigned to each player by using a callback function
@@ -347,7 +350,7 @@ def player_nutrition_value():
     return player_calorie_value
 
 
-def player_nutrition_score():
+def player_nutrition_score() -> int:
     """
     function that compares active metabolic rate of player
     with caloric value of food intake and assignes nutrition score to
@@ -378,7 +381,7 @@ def overall_player_score(each):
     return each.overall_score
 
 
-def team_preformance_score():
+def team_preformance_score() -> int:
     """
     get final team score bay summ of all players
     score and give the result in precentages
