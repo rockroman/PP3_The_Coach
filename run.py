@@ -408,7 +408,7 @@ def main():
     """
     runs all the functions
     """
-    # welcome()
+    welcome()
     start_coach()
 
 
