@@ -222,7 +222,7 @@ The following flowchart summarises the structure and logic of the application.
 
 ### Frameworks & Tools
 
-- [Diagrams.net](https://app.diagrams.net/) was used to draw program flowchart
+- []() was used to draw program flowchart
 
 - [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
 - [GitHub](https://github.com/) was used as a remote repository to store project code
@@ -236,17 +236,20 @@ VSCode was used to write the project code using Code Institute template
 ### Libraries
 
 #### Python Libraries
-- os - used to clear terminal
-- random - used to alternate first player to start the game
-- sys & sleep - used to create a typing effect within the games rules
+- click - used to clear the terminal 
+- random - used to generate random palyer values inside given parameters
+- typing -used for type hints and return data types in python code
+- sys & sleep - used to create a typing effect troughout the project
 - time - used to displayed delayed messages in the terminal
 - [unittest](https://docs.python.org/3/library/unittest.html) - used to carry out testing on single units in validation.py file
 
 #### Third Party Libraries
-- [colorama](https://pypi.org/project/colorama/) - JUSTIFICATION: I used this library to add color to the terminal and enhance user experience. I marked warning/error information with color red and user feedback with blue and green
-- [email_validator](https://pypi.org/project/email-validator/) - JUSTIFICATION: I used this library to validate if user email input is of the form name@</span>example.com
-- [gspread](https://docs.gspread.org/en/latest/) - JUSTIFICATION: I used gspread to add and manipulate data in my Google spreadsheet and to interact with Google APIs
-- [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) - JUSTIFICATION: module used to set up the authentification needed to access the Google API and connect my Service Account with the Credentials function. A creds.json file is created with all details the API needs to access the google account. In deployment to heroku this information is stored in the config var section.
+- [requests ](https://pypi.org/project/requests/)- used this library to call [CalorieNinjas API](https://calorieninjas.com/api) and get caloric values of assigned meals 
+- []()-
+- [colorama](https://pypi.org/project/colorama/) - used this library to add color to the terminal and enhance user experience.  warning information is marked red while details that user can focus on with green color.Program title was colored blue 
+- [email_validator](https://pypi.org/project/email-validator/) - used this library to validate if user email input is in correct form
+- [gspread](https://docs.gspread.org/en/latest/) - JUSTIFICATION: used gspread for data manipulation inside  Google spreadsheet and  interaction with Google APIs
+- [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) -  module used to set up the authentification needed to access the Google API and connect my Service Account with the Credentials function. A creds.json file is created with all details the API needs to access the google account. In deployment to heroku this information is stored in the config var section along with another custom config var provided by code institute.
 
 [Back to Table Of Contents](#table-of-contents)
 
