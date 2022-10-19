@@ -51,26 +51,39 @@ in optimizing the team and individual performance of an athlete.
 - Create something fun and unique 
 - See the result of input choices
 
-
-
-
 ### Site Owner Goals
 
-
+- Create a program that is Easy to use
+- Create a program with possible real-world usage
+- Create a program that provides feedback to a user
+- Create a program that can be further developed in multiple directions
 
 ## User Experience
 
 ### Target Audience
 
+- Sports enthusiasts
+- Coahing enthusiasts
+- Strategic thinkers
+
 
 
 ### User Requirements and Expectations
+
+- Simple easy to use and understand program
+- Intuitive navigation
+- Engaging content
+- Possibility of creativity inside certain parameters
+- Personalization (usernames and player names)
+- Feedback to user in different stages of programm
+- Final result
 
 
 ### User Manual
 
 <details><summary>Click here to view instructions</summary>
 
+<details>
 #### Main Menu
 
 
