@@ -1,8 +1,14 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# THE COACH
+
+[Live live website -->](https://romanscoach.herokuapp.com/)
+
+![Mockup image](docs/)
 
 ## About
 
-The Coach is a command-line small Python programm that can be considered as type of simulation or game.
+The Coach is a command-line small Python program that can be considered a type of simulation or game. Project will put user in a position of a Coach for
+a team of 5 Basketball players that will be created based on user input. Input has to be inside Realistic parameters determined by the developer.Program will output the percentage of possible team performance so that user will have a Idea of how good final result Is.Program was developed as a 3rd portfolio project in acquiring the "Diploma In Software Development" with Code institute.
+The requirements of this project were use of Python programming language and it's libraries to develop a program in a mock terminal in the browser. 
 
 ## Table of Contents
   - [Project Goals](#project-goals)
@@ -32,8 +38,19 @@ The Coach is a command-line small Python programm that can be considered as type
   - [Acknowledgements](#acknowledgements)
 
 ## Project Goals
+- The Coach program is intended to be the beginning of possible
+real-world application used in sports by coaches, mentors and even
+athletes themself.With certain upgrades and some more real-world based 
+calculations in regard of caloric values and influences of certain training routines to athlete's bodies this program could provide value and assist
+in optimizing the team and individual performance of an athlete.
 
 ### User Goals
+- Interact with program that is fun and easy to understand
+- Use a program that has real-life potential
+- Be able to Log in and come back to the existing account
+- Create something fun and unique 
+- See the result of input choices
+
 
 
 
