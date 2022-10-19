@@ -23,6 +23,7 @@ The requirements of this project were use of Python programming language and it'
     - [Site Owner](#site-owner)
   - [Technical Design](#technical-design)
     - [Flowchart](#flowchart)
+    - [Data Models](#data-models) 
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks & Tools](#frameworks--tools)
@@ -214,6 +215,15 @@ The following flowchart summarises the structure and logic of the application.
 <img >
 </details>
 
+### Data models
+
+- OOP(object oriented programming) was implemented in certain parts of this programm
+- calsses -- One class was used to create all players with certain attributes(name,age,weight,height),
+and method that calculates active metabolic rate of each player.
+- lists -- usage of lists in program is quite often because most of operations and calculations required repetition and iteration multiple times.
+- google sheets API - used to manipulate data(CRUD- create ,read update and delete)
+- Calorie ninjas API - used to retrieve caloric value from users input 
+
 ## Technologies Used
 
 ### Languages
@@ -256,6 +266,38 @@ VSCode was used to write the project code using Code Institute template
 ## Features
 
 ### Main menu
+
+<details>
+    <summary>Main Menu Screenshot</summary>
+
+![Main menu](docs/features/main-menu.JPG)
+</details
+
+### Program instructions
+
+![]()
+
+### Options menu 1
+
+### Options menu 2
+
+### Create user(Sign-up)
+
+### Validate exsisting user(Log-in)
+
+### Creating players
+
+### Created players table
+
+### Trainings menu
+
+### Meals Menu
+
+### Calculated values table
+
+### Final value and thank you note
+
+### End or play again menu
 
 
  
