@@ -97,7 +97,7 @@ option to proceed and option to exit the program
 input validation is implemented troughout program so if invalid or outside parameters input is given user will be prompted to repeat the input  
 
 ### exit
-program is terminated on 
+- program is terminated  
 
 #### proceed
 
@@ -180,25 +180,28 @@ and his previous result is cleared from the database
 
 ## User Stories
 
-### Users
+### New User
 
-1. 
-2.
-3. 
-4. 
-5. 
-6. 
-7. 
-8. 
-9. 
+1. I want to have an idea what the program is about
+2. I want to be able to have clear and simple navigation   
+3. I want to be able log in and return to a program later
+4. I want to be able to get feedback in different stages of program
+5. I want to be informed why my input is not valid
+6. I want input parameters to be displayed clearly
+7. I want to see what choices i made
+8. I want to be able to play multiple times without loging in again
+9. I want to use the program with real-world data
+10. I want to use the program that allows certain creativity inside parameters  
 
 ### Site Owner
+ 
+11. I want user to easily and intuitevly navigates troughout program
+12. I want user to be guided and informed how to make valid inputs
+13. I want user to be able to personalize his experience and inputs
+14. I want user to have clear feedback of inputs
+15. I want user details to be stored and retrieved on demand into the database
+16. I want user to have option to exit the program
 
-10. 
-11. 
-12. 
-13. 
-14. 
 [Back to Table Of Contents](#table-of-contents)
 
 ## Technical Design
@@ -220,13 +223,13 @@ The following flowchart summarises the structure and logic of the application.
 ### Frameworks & Tools
 
 - [Diagrams.net](https://app.diagrams.net/) was used to draw program flowchart
-- [Font Awesome](https://fontawesome.com/) - icons from Font Awesome were used in the footer below the program terminal
+
 - [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
 - [GitHub](https://github.com/) was used as a remote repository to store project code
 - [Google Cloud Platform](https://cloud.google.com/cloud-console/) was used to manage access and permissions to the Google Services such as Google auth, sheets etc.
 - [Google Sheets](https://www.google.co.uk/sheets/about/) were used to store players details
 - [Heroku Platform](https://dashboard.heroku.com/) was used to deploy the project into live environment
-
+- [Font Awesome](https://fontawesome.com/) - icons from Font Awesome were used in the footer below the program terminal
 - [Visual Studio Code (VSCode)](https://code.visualstudio.com/)
 VSCode was used to write the project code using Code Institute template
 
