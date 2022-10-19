@@ -199,8 +199,8 @@ def get_player_trained() -> None:
     """
     note = """
 YOU CAN NOW ASSIGN A TRAINING TO EACH PLAYER
-NOTE! Higher the training number
-more Value it brings.
+NOTE! HIGHER THE TRAINING NUMBER
+MORE VALUE IT BRINGS.
 Don't overtrain the player
     """
     num = 1
@@ -305,6 +305,12 @@ def get_player_meal() -> List[str]:
     function assigns each player with
     food option choosed by User
     """
+    note = """
+You can now assign 3 meals for
+each player!NOTE EACH MEAL HAS CALORIC VALUE
+SO TRY AND BALANCE THE MEALS.
+    """
+    val.slow_print(note)
     for play in my_players:
         val.slow_print(f"please choose 3 meals for {play.name.upper()} today:")
         print('#######################################')

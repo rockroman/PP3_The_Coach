@@ -84,44 +84,91 @@ in optimizing the team and individual performance of an athlete.
 <details><summary>Click here to view instructions</summary>
 
 #### Overview
-- Using this program user wil create 5 players inside given parameters that allow certain creativity.In the next stage user will choose 3 different types of training ,each training got a value (that is not presented to a user, but user is warned that the higher the number of training that value is  higher)
+- Using this program user will create 5 players inside given parameters that allow certain creativity.In the next stage user will choose 3 different types of training ,each training got a value (that is not presented to a user, but user is warned that the higher the number of training that value is  higher)
 that will Carry a half of the player overall value.next stage calls user to pick 3 food options for each player.also each option has a caloric value (not presented to a user ). so user has to use common sense for food options ,cause caloric value of the food will be compared to a user active metabolic rate that is calculated after input values for each player.Food options will carry another half of player value. final stage of program is giving feedback to user with final result got with calculating both halfs of user value and than getting overall value of team in percentage
+
+
 #### Main Menu
 
+- Main menu is presented to user with ASCII art of the program title
+and short description of program instuctions.
+at the bottom of menu user is presented with 2 options 
+option to proceed and option to exit the program
+input validation is implemented troughout program so if invalid or outside parameters input is given user will be prompted to repeat the input  
+
+### exit
+program is terminated on 
+
+#### proceed
+
+- this option will present user with 
+another 2 options
+1. new user 
+2. existing user
 
 
+#### New user registration (sign-up)
 
-#### Program instructions
-
-#### Play
-
-
-#### Log-in
-
-1. Try another email
-2. Create a new player
+ - user is asked to create username and to put
+ the email.
+ - user email is validated with python (email_validator) library 
+ - after both inputs are validated user credentials are stored into th database(google spreadsheet)
 
 
-Same option follow for Player2.
+#### existing user
 
-#### New players registration (sign-up)
-
-
-#### Users greeting
-
-Once both users have been logged in, the program will display a greeting message with both names and start the game.
+- this option will returnig user to input
+email adress. if email is found in database program will retrieve users username and greet user with username and percentage(score) user had on his last use of the program
 
 #### Program
+ 
+- user will create 5 players and each player will consist of name,age,height and weight. all inputs will go trough 
+validation process
 
+Operation: Input numbers and characters then press enter key.
+
+#### players data table
+
+- after creating a team user is presented with table 
+consisting of his inputs for each player and active metabolic rate value calculated based on inputs.
+
+##### training
+
+- user will have to assign 3 training options to each player and each option has certain value
+ validation of inputs is implemented also.
 
 Operation: Input a numeric value and press enter key.
 
-#### Go again
-By selecting this option a new game starts for the same players.
+#### meals
 
-#### Go to main menu
+- user will assign 3 food options for each player, and 
+also each option carries certain calorie value
+input validation implemented.
 
+Operation: Input a numeric value and press enter key.
 
+#### final values table 
+
+- after choosing training and meals for all players 
+program will perform calculation and present to user table of values thad lead to final result.
+
+#### team performance percentage
+
+- final calculation is done and it's presented to user
+with thank you message
+
+#### end of program menu
+
+- after final result user will be presented with 2 options menu
+1. go again
+2. exit
+
+Operation: Input a numeric value and press enter key.
+
+#### go again
+
+- user is returned back to create team 
+and his previous result is cleared from the database 
 
 
 #### Exit program
