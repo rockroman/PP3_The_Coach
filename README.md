@@ -218,7 +218,7 @@ The following flowchart summarises the structure and logic of the application.
 ### Data models
 
 - OOP(object oriented programming) was implemented in certain parts of this programm
-- calsses -- One class was used to create all players with certain attributes(name,age,weight,height),
+- classes -- One class was used to create all players with certain attributes(name,age,weight,height),
 and method that calculates active metabolic rate of each player.
 - lists -- usage of lists in program is quite often because most of operations and calculations required repetition and iteration multiple times.
 - google sheets API - used to manipulate data(CRUD- create ,read update and delete)
