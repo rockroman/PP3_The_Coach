@@ -2,7 +2,7 @@
 
 [Live live website -->](https://romanscoach.herokuapp.com/)
 
-![Mockup image](docs/)
+![Mockup image](docs/features/mockup-img.png)
 
 ## About
 
@@ -275,7 +275,7 @@ VSCode was used to write the project code using Code Institute template
 ## Features
 <hr>
 
-### <u>Intro Screen</u>
+### Intro Screen
 
 - Introduce user with a program and give a hint what is it about
 - user story covered: 1
@@ -283,16 +283,17 @@ VSCode was used to write the project code using Code Institute template
 <details>
     <summary>Intro screen Screenshot</summary>
 
-![Intro screen](docs/features/main-menu.JPG)
-</details>
+![Intro screen](docs/features/program-title1.png)
+</details>  
 
 ### Program instructions
 
 - Displaying instructions on how to use program and what to expect
 - user story covered: 1
 <details>
-<summary>Screenshot</summary>
-![Program instructions]()
+    <summary>Screenshot</summary>
+
+![Program instructions](docs/features/program-instructions.png)
 </details>
 
 ### Options menu 1
@@ -302,7 +303,8 @@ to proceed or exit a program
 - user story covered: 17,16,12
 <details>
 <summary>Screenshot</summary>
-![Options menu 1]()
+
+![Options menu 1](docs/features/menu1.png)
 </details>
 
 
@@ -313,7 +315,8 @@ as an existing user
 - user story covered: 3,16,12
 <details>
 <summary>Screenshot</summary>
-![Options menu 2]()
+
+![Options menu 2](docs/features/menu2.png)
 </details>
 
 ### Create user(Sign-up)
@@ -326,7 +329,8 @@ as an existing user
 - user story covered: 3,16,5
 <details>
 <summary>Screenshot</summary>
-![Sign-up]()
+
+![Sign-up](docs/features/create-user.png)
 </details>
 
 ### Validate exsisting user(Log-in)
@@ -340,7 +344,8 @@ as an existing user
 - user story covered: 15,3
 <details>
 <summary>Screenshot</summary>
-![Log-in]()
+
+![Log-in](docs/features/validate-exsisting-user.png)
 </details>
 
 ### Creating players
@@ -352,7 +357,8 @@ along with message that gives instruction on valid inputs
 - user story covered: 6,9,13,14,10
 <details>
 <summary>Screenshot</summary>
-![Creating players]()
+
+![Creating players](docs/features/creating-players.png)
 </details>
 
 ### Created players table
@@ -361,7 +367,8 @@ along with message that gives instruction on valid inputs
 - user story covered: 4,15,7
 <details>
 <summary>Screenshot</summary>
-![Created players table]()
+
+![Created players table](docs/features/table-1.png)
 </details>
 
 ### Trainings menu
@@ -370,9 +377,16 @@ along with message that gives instruction on valid inputs
 input validation implemented
 - user story covered: 15,9,7
 <details>
-<summary>Screenshot</summary>
-![Trainings menu]()
+<summary>Screenshot1</summary>
+
+![Trainings menu](docs/features/training-options1.png)
 </details>
+<details>
+<summary>Screenshot2</summary>
+
+![Trainings menu](docs/features/training-options2.png)
+</details>
+
 
 ### Meals Menu
 
@@ -380,7 +394,8 @@ input validation implemented
 - user story covered: 15,9,6,10,7
 <details>
 <summary>Screenshot</summary>
-![Meals Menu]()
+
+![Meals Menu](docs/features/meals-menu.png)
 </details>
 
 ### Calculated values table
@@ -389,7 +404,8 @@ input validation implemented
 - user story covered: 15,4
 <details>
 <summary>Screenshot</summary>
-![Final table]()
+
+![Final table](docs/features/final-table.png)
 </details>
 
 ### Final value and thank you note
@@ -400,7 +416,8 @@ and user is greeted with a thank you message
 - user story covered: 11,18
 <details>
 <summary>Screenshot</summary>
-![final value and note]()
+
+![final value and note](docs/features/final-result-and-note.png)
 </details>
 
 ### End or play again menu
@@ -411,7 +428,8 @@ and user is greeted with a thank you message
 - user story covered: 8
 <details>
 <summary>Screenshot</summary>
-![end game menu]()
+
+![end game menu](docs/features/end-menu.png)
 </details>
 
 
@@ -424,23 +442,51 @@ inside given parameters
 <details>
     <summary>Username validation Screenshot</summary>
 
-![Username validation](docs/features/validation-username.JPG)
+![Username validation](docs/features/username-validation.png)
 </details>
 
 <details>
     <summary>Email validation Screenshot</summary>
 
-![Email validation](docs/features/validation-email.JPG)
+![Email validation](docs/features/email-validation.png)
 </details>
 
 <details>
-    <summary>Validation of all in-game inputs  Screenshot</summary>
+    <summary>Validation of in-program inputs  Screenshot</summary>
 
-![]()
-![]()
-![]()
-![]()
-![]()
+<details>
+<summary>Player-validation1 Screenshot</summary>
+
+![player-validation](docs/features/player-validation1.png)
+</details>
+
+<details>
+<summary>Player-validation2 Screenshot</summary>
+
+![player-validation](docs/features/player-validation2.png)
+</details>
+
+<details>
+<summary>Player-validation3 Screenshot</summary>
+
+![player-validation](docs/features/player-validation3.png)
+</details>
+ 
+<details>
+<summary>Training-validation Screenshot</summary>
+
+![Training-validation](docs/features/training-validation.png)
+</details>
+
+<details>
+<summary>Meals-validation Screenshot</summary>
+
+![Meals-validation](docs/features/meal-validation.png)
+</details>
+
+
+
+
 ![]()
 </details>
 
