@@ -39,6 +39,7 @@ The requirements of this project were use of Python programming language and it'
   - [Acknowledgements](#acknowledgements)
 
 ## Project Goals
+<hr>
 - The Coach program is intended to be the beginning of possible
 real-world application used in sports by coaches, mentors and even
 athletes themself.With certain upgrades and some more real-world based 
@@ -81,6 +82,7 @@ in optimizing the team and individual performance of an athlete.
 
 
 ### User Manual
+<hr>
 
 <details><summary>Click here to view instructions</summary>
 
@@ -180,6 +182,7 @@ and his previous result is cleared from the database
 [Back to Table Of Contents](#table-of-contents)
 
 ## User Stories
+<hr>
 
 ### New User
 
@@ -192,20 +195,23 @@ and his previous result is cleared from the database
 7. I want to see what choices i made
 8. I want to be able to play multiple times without loging in again
 9. I want to use the program with real-world data
-10. I want to use the program that allows certain creativity inside parameters  
+10. I want to use the program that allows certain creativity inside parameters
+11. I want to know the final result of using the program  
 
 ### Site Owner
  
-11. I want user to easily and intuitevly navigates troughout program
-12. I want user to be guided and informed how to make valid inputs
-13. I want user to be able to personalize his experience and inputs
-14. I want user to have clear feedback of inputs
-15. I want user details to be stored and retrieved on demand into the database
-16. I want user to have option to exit the program
+12. I want user to easily and intuitevly navigates troughout program
+13. I want user to be guided and informed how to make valid inputs
+14. I want user to be able to personalize his experience and inputs
+15. I want user to have clear feedback of inputs
+16. I want user details to be stored and retrieved on demand into the database
+17. I want user to have option to exit the program
+18. I want user to know the final result
 
 [Back to Table Of Contents](#table-of-contents)
 
 ## Technical Design
+<hr>
 
 ### Flowchart
 
@@ -216,6 +222,7 @@ The following flowchart summarises the structure and logic of the application.
 </details>
 
 ### Data models
+<hr>
 
 - OOP(object oriented programming) was implemented in certain parts of this programm
 - classes -- One class was used to create all players with certain attributes(name,age,weight,height),
@@ -225,8 +232,10 @@ and method that calculates active metabolic rate of each player.
 - Calorie ninjas API - used to retrieve caloric value from users input 
 
 ## Technologies Used
+<hr>
 
 ### Languages
+
 
 - [Python](https://www.python.org/) programming language for the logic of the program
 
@@ -264,178 +273,153 @@ VSCode was used to write the project code using Code Institute template
 [Back to Table Of Contents](#table-of-contents)
 
 ## Features
+<hr>
 
-### Intro Screen
+### <u>Intro Screen</u>
+
+- Introduce user with a program and give a hint what is it about
+- user story covered: 1
 
 <details>
-    <summary>Main Menu Screenshot</summary>
+    <summary>Intro screen Screenshot</summary>
 
-![Main menu](docs/features/main-menu.JPG)
-</details
+![Intro screen](docs/features/main-menu.JPG)
+</details>
 
 ### Program instructions
 
-![]()
+- Displaying instructions on how to use program and what to expect
+- user story covered: 1
+<details>
+<summary>Screenshot</summary>
+![Program instructions]()
+</details>
 
 ### Options menu 1
-![]()
+
+- provide 2 options for a user
+to proceed or exit a program
+- user story covered: 17,16,12
+<details>
+<summary>Screenshot</summary>
+![Options menu 1]()
+</details>
+
 
 ### Options menu 2
-![]()
+
+- User is presented with option to to (sign-up) as a new user or to (log-in)
+as an existing user 
+- user story covered: 3,16,12
+<details>
+<summary>Screenshot</summary>
+![Options menu 2]()
+</details>
 
 ### Create user(Sign-up)
-![]()
+
+- User is prompted to make a username
+- validating username input
+- user asked to provide valid email address
+- informs user is email in valid format
+- saving credentials into the Google Spreadsheet
+- user story covered: 3,16,5
+<details>
+<summary>Screenshot</summary>
+![Sign-up]()
+</details>
 
 ### Validate exsisting user(Log-in)
-![]()
+
+- User is prompted to enter the valid email that is stored in database
+- validating email
+- if email is not in database user is taken step back to choose
+ between new user or existing user
+ - if email is in database user is greeted with username
+ and with last result achieved while using the program
+- user story covered: 15,3
+<details>
+<summary>Screenshot</summary>
+![Log-in]()
+</details>
 
 ### Creating players
-![]()
+
+- user can start creating players inside
+  given parameters
+- if input is not inside parameter user is asked to repeat the input 
+along with message that gives instruction on valid inputs
+- user story covered: 6,9,13,14,10
+<details>
+<summary>Screenshot</summary>
+![Creating players]()
+</details>
 
 ### Created players table
-![]()
+
+- table with user input values for each created player
+- user story covered: 4,15,7
+<details>
+<summary>Screenshot</summary>
+![Created players table]()
+</details>
 
 ### Trainings menu
-![]()
+
+- User can choose from range of training options and pick 3 for each player
+input validation implemented
+- user story covered: 15,9,7
+<details>
+<summary>Screenshot</summary>
+![Trainings menu]()
+</details>
 
 ### Meals Menu
-![]()
+
+- User i presented with meal options for each player and have to assign 3 options for each player
+- user story covered: 15,9,6,10,7
+<details>
+<summary>Screenshot</summary>
+![Meals Menu]()
+</details>
 
 ### Calculated values table
-![]()
+
+- Calculated value for each player ,values will be used to determine final result
+- user story covered: 15,4
+<details>
+<summary>Screenshot</summary>
+![Final table]()
+</details>
 
 ### Final value and thank you note
-![]()
+
+- user is presented with final result of the program
+team performance percentage based on inputs given
+and user is greeted with a thank you message
+- user story covered: 11,18
+<details>
+<summary>Screenshot</summary>
+![final value and note]()
+</details>
+
 ### End or play again menu
-![]()
 
-
- 
+- user has 2 options to choose to go again or to exit program
+- if go again is chosen user final result achieved is deleted from the database and it will be updated with new result at the end
+- is exit option is chosen program is terminated
+- user story covered: 8
 <details>
-    <summary>Main Menu Screenshot</summary>
-
-![Main menu](docs/features/main-menu.JPG)
+<summary>Screenshot</summary>
+![end game menu]()
 </details>
 
-### Game rules
-
-  
-<details>
-    <summary>Game rules Screenshot</summary>
-
-![Game rules](docs/features/game-rules.JPG)
-</details>
-
-### Play options
-
-
-<details>
-    <summary>Play options Screenshot</summary>
-
-![Play options](docs/features/play-options.JPG)
-</details>
-
-### Log-in
-
-
-<details>
-    <summary>Log-in Screenshot</summary>
-
-![Log-in](docs/features/log-in.JPG)
-</details>
-
-<details>
-    <summary>Alternative options Screenshot</summary>
-
-![Log-in wrong email](docs/features/log-in-wrong-email.JPG)
-</details>
-
-### Sign-up
-
-<details>
-    <summary>Sign-up Screenshot</summary>
-
-![Sign-up](docs/features/sign-up.JPG)
-</details>
-
-<details>
-    <summary>Sign-up email verification Screenshot</summary>
-
-![Sign-up wrong email](docs/features/sign-up-wrong-email.JPG)
-</details>
-
-### Users greeting
-
-
-<details>
-    <summary>Greeting Screenshot</summary>
-
-![User greeting](docs/features/user-greeting.JPG)
-</details>
-
-### Game
-
-
-<details>
-    <summary>Game Screenshot</summary>
-
-![Game screen](docs/features/game-screen.JPG)
-</details>
-
-<details>
-    <summary>Incorrect Move in Game Screenshot</summary>
-
-![Move validation in Game screen](docs/features/game-screen-move-validation.JPG)
-</details>
-
-<details>
-    <summary>Winner Message Screenshot</summary>
-
-![Winner Message](docs/features/game-screen-winner-message.JPG)
-</details>
-
-### Finished Game options
-
-<details>
-    <summary>Finished Game options Screenshot</summary>
-
-![Finished Game options](docs/features/finished-game-options.JPG)
-</details>
-
-#### Play 
-
-
-<details>
-    <summary>Restart game Screenshot</summary>
-
-![Restart Game](docs/features/restart-game.JPG)
-</details>
-
-#### Go to main menu
-
-
-#### See your statistics
-
-
-<details>
-    <summary>See your statistics Screenshot</summary>
-
-![Statistics](docs/features/statistics.jpg)
-</details>
-
-#### Quit game
-- Exits the program with a goodbye message
-
-<details>
-    <summary>Quit game Screenshot</summary>
-
-![Quit Game](docs/features/quit-game.JPG)
-</details>
 
 ### User Input Validation
-- Displays an error message if user input is not in a form that was expected
-- Asks for a new input and provides guidance to user on how to correctly format the input
-- User stories covered: 5, 13, 14
+- Displays an error message if user input is not in a form that was expected or 
+inside given parameters
+- Asks for a new input and provides guidance to user on how to make valid input
+- User stories covered: 5,6,13,15
 
 <details>
     <summary>Username validation Screenshot</summary>
@@ -450,9 +434,14 @@ VSCode was used to write the project code using Code Institute template
 </details>
 
 <details>
-    <summary>Validation of input during the game Screenshot</summary>
+    <summary>Validation of all in-game inputs  Screenshot</summary>
 
-![Moves validation](docs/features/game-screen-move-validation.JPG)
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
 </details>
 
 [Back to Table Of Contents](#table-of-contents)
