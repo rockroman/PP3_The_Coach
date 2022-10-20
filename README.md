@@ -265,7 +265,7 @@ VSCode was used to write the project code using Code Institute template
 
 ## Features
 
-### Main menu
+### Intro Screen
 
 <details>
     <summary>Main Menu Screenshot</summary>
@@ -278,26 +278,36 @@ VSCode was used to write the project code using Code Institute template
 ![]()
 
 ### Options menu 1
+![]()
 
 ### Options menu 2
+![]()
 
 ### Create user(Sign-up)
+![]()
 
 ### Validate exsisting user(Log-in)
+![]()
 
 ### Creating players
+![]()
 
 ### Created players table
+![]()
 
 ### Trainings menu
+![]()
 
 ### Meals Menu
+![]()
 
 ### Calculated values table
+![]()
 
 ### Final value and thank you note
-
+![]()
 ### End or play again menu
+![]()
 
 
  
