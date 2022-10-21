@@ -184,7 +184,7 @@ and his previous result is cleared from the database
 ## User Stories
 <hr>
 
-### New User
+### Users
 
 1. I want to have an idea what the program is about
 2. I want to be able to have clear and simple navigation   
@@ -300,7 +300,7 @@ VSCode was used to write the project code using Code Institute template
 
 - provide 2 options for a user
 to proceed or exit a program
-- user story covered: 17,16,12
+- user story covered: 17,16,12,2
 <details>
 <summary>Screenshot</summary>
 
@@ -312,7 +312,7 @@ to proceed or exit a program
 
 - User is presented with option to to (sign-up) as a new user or to (log-in)
 as an existing user 
-- user story covered: 3,16,12
+- user story covered: 3,16,12,2
 <details>
 <summary>Screenshot</summary>
 
@@ -375,7 +375,7 @@ along with message that gives instruction on valid inputs
 
 - User can choose from range of training options and pick 3 for each player
 input validation implemented
-- user story covered: 15,9,7
+- user story covered: 15,9,7,2
 <details>
 <summary>Screenshot1</summary>
 
@@ -425,7 +425,7 @@ and user is greeted with a thank you message
 - user has 2 options to choose to go again or to exit program
 - if go again is chosen user final result achieved is deleted from the database and it will be updated with new result at the end
 - is exit option is chosen program is terminated
-- user story covered: 8
+- user story covered: 8,2
 <details>
 <summary>Screenshot</summary>
 
@@ -484,10 +484,6 @@ inside given parameters
 ![Meals-validation](docs/features/meal-validation.png)
 </details>
 
-
-
-
-![]()
 </details>
 
 [Back to Table Of Contents](#table-of-contents)
@@ -503,33 +499,45 @@ The testing approach is as follows:
 2. Automated unit testing using the Python unittest library
 
 ### Manual Testing
-<details><summary>See user stories testing</summary>
+<details><summary> User stories testing</summary>
 
-1.
+1. I want to have an idea what the program is about
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-
+| Intro screen | User is presented with an intro text | Intro screen presented | Works as expected |
+| Program instructions |User is presented with  Program instructions screen | instructions screen presented| Works as expected | 
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-story-1.jpg">
+</details>
 <details><summary>Screenshot</summary>
 <img src="docs/testing/user-story-1.jpg">
 </details>
 
-2.
+2. I want to be able to have clear and simple navigation
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Main menu | Select option 1 | Users are presented with game rules | Works as expected |
+| Options menu 1 | Select between 2 options | user is taken to options menu 2 (where new or existing user option is presented ) or user is exiting the program  | Works as expected |
+| Options menu 2 |  Select between 2 options | use can create a new user or log in as an existing one | Works as expected|
+| End or play again menu | Select between 2 options | user can go agin and go trough program or exit the program| Works as expected|
 
 <details><summary>Screenshot</summary>
 <img src="docs/testing/user-story-2.jpg">
 </details>
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-story-2.jpg">
+</details>
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-story-2.jpg">
+</details>
 
-3. 
+3. I want to be able log in and return to a program later
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-
-
+| Create user(Sign-up)| User is choosing new user option| User is prompted to put a username and valid email address| Works as expected |
+| Validate exsisting user(Log-in) |User is choosing existing  user option | User is prompted valid email address if email is in database user is greeted with username and can proceed to using program| Works as expected|
 <details><summary>Screenshot</summary>
 <img src="docs/testing/user-story-3-a.jpg">
 </details>
@@ -537,12 +545,12 @@ The testing approach is as follows:
 <img src="docs/testing/user-story-3-b.jpg">
 </details>
 
-4.
+4. I want to be able to get feedback in different stages of program
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-
-
+| Created players table | expected from user to put in valid inputs | Table with input values is presented| Works as expected| 
+| Calculated values table | user inputs  expected to be valid | Table with Calculated values is presented |  Works as expected| 
 <details><summary>Screenshot</summary>
 <img src="docs/testing/user-story-4.jpg">
 </details>
