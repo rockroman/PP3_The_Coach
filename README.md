@@ -499,6 +499,7 @@ The testing approach is as follows:
 2. Automated unit testing using the Python unittest library
 
 ### Manual Testing
+<hr>
 <details><summary> User stories testing</summary>
 
 1. I want to have an idea what the program is about
@@ -508,10 +509,10 @@ The testing approach is as follows:
 | Intro screen | User is presented with an intro text | Intro screen presented | Works as expected |
 | Program instructions |User is presented with  Program instructions screen | instructions screen presented| Works as expected | 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-story-1.jpg">
+<img src="docs/testing/user_stories/story1.jpg">
 </details>
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-story-1.jpg">
+<img src="docs/testing/user_stories/story1a.jpg">
 </details>
 
 2. I want to be able to have clear and simple navigation
@@ -523,13 +524,13 @@ The testing approach is as follows:
 | End or play again menu | Select between 2 options | user can go agin and go trough program or exit the program| Works as expected|
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-story-2.jpg">
+<img src="docs/testing/user_stories/story2.jpg">
 </details>
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-story-2.jpg">
+<img src="docs/testing/user_stories/story2a.jpg">
 </details>
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-story-2.jpg">
+<img src="docs/testing/user_stories/story2b.jpg">
 </details>
 
 3. I want to be able log in and return to a program later
@@ -539,10 +540,10 @@ The testing approach is as follows:
 | Create user(Sign-up)| User is choosing new user option| User is prompted to put a username and valid email address| Works as expected |
 | Validate exsisting user(Log-in) |User is choosing existing  user option | User is prompted valid email address if email is in database user is greeted with username and can proceed to using program| Works as expected|
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-story-3-a.jpg">
+<img src="docs/testing/user_stories/story3.jpg">
 </details>
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-story-3-b.jpg">
+<img src="docs/testing/user_stories/story3a.jpg">
 </details>
 
 4. I want to be able to get feedback in different stages of program
@@ -552,7 +553,10 @@ The testing approach is as follows:
 | Created players table | expected from user to put in valid inputs | Table with input values is presented| Works as expected| 
 | Calculated values table | user inputs  expected to be valid | Table with Calculated values is presented |  Works as expected| 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-story-4.jpg">
+<img src="docs/testing/user_stories/story4.jpg">
+</details>
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user_stories/story4a.jpg">
 </details>
 
 5. 
