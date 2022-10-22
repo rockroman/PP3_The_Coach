@@ -203,7 +203,7 @@ and his previous result is cleared from the database
 12. I want user to easily and intuitevly navigates troughout program
 13. I want user to be guided and informed how to make valid inputs
 14. I want user to be able to personalize his experience and inputs
-15. I want user to have clear feedback of inputs
+15. I want user to have clear feedback from  inputs
 16. I want user details to be stored and retrieved on demand into the database
 17. I want user to have option to exit the program
 18. I want user to know the final result
@@ -326,7 +326,7 @@ as an existing user
 - user asked to provide valid email address
 - informs user is email in valid format
 - saving credentials into the Google Spreadsheet
-- user story covered: 3,16,5
+- user story covered: 3,16,5,14
 <details>
 <summary>Screenshot</summary>
 
@@ -341,7 +341,7 @@ as an existing user
  between new user or existing user
  - if email is in database user is greeted with username
  and with last result achieved while using the program
-- user story covered: 15,3
+- user story covered: 15,3,16
 <details>
 <summary>Screenshot</summary>
 
@@ -375,7 +375,7 @@ along with message that gives instruction on valid inputs
 
 - User can choose from range of training options and pick 3 for each player
 input validation implemented
-- user story covered: 15,9,7,2
+- user story covered: 9,7,2
 <details>
 <summary>Screenshot1</summary>
 
@@ -387,21 +387,43 @@ input validation implemented
 ![Trainings menu](docs/features/training-options2.png)
 </details>
 
+### Trainings-choosed
+
+- trainings for a player is displayed after choosing 3 options
+- user story covered: 7,15
+<details>
+<summary>Screenshot</summary>
+
+![Trainings choosed](docs/features/training-choosed.png)
+</details>
+
+
 
 ### Meals Menu
 
 - User i presented with meal options for each player and have to assign 3 options for each player
-- user story covered: 15,9,6,10,7
+- user story covered: 9,6,10,7
 <details>
 <summary>Screenshot</summary>
 
 ![Meals Menu](docs/features/meals-menu.png)
 </details>
 
+### Meals choosed
+
+- meals for each player is displayed after every 3 meals choosen
+- user story covered: 7,15
+
+<details>
+<summary>Screenshot</summary>
+
+![Meals Menu](docs/features/meals-choosed.png)
+</details>
+
 ### Calculated values table
 
 - Calculated value for each player ,values will be used to determine final result
-- user story covered: 15,4
+- user story covered: 15,4,7
 <details>
 <summary>Screenshot</summary>
 
@@ -425,7 +447,7 @@ and user is greeted with a thank you message
 - user has 2 options to choose to go again or to exit program
 - if go again is chosen user final result achieved is deleted from the database and it will be updated with new result at the end
 - is exit option is chosen program is terminated
-- user story covered: 8,2
+- user story covered: 8,2,12
 <details>
 <summary>Screenshot</summary>
 
@@ -489,6 +511,41 @@ inside given parameters
 [Back to Table Of Contents](#table-of-contents)
 
 ## Validation
+
+- Since  [PEP8 Validation Service](http://pep8online.com/) site is down and can't be used
+PEP8 validator "pycodestyle" was installed directly to  Gitpod Workspace and Im uploading images of all 
+python files in my project. All files are cleared of errors and are up to PEP8 standards (if there were any errors there would be a red line inside my source code)
+
+<details>
+<summary>run.py</summary>
+
+![run.py](docs/features/meal-validation.png)
+</details>
+
+<details>
+
+<summary>player.py</summary>
+
+![player.py](docs/features/meal-validation.png)
+</details>
+
+<details>
+<summary>data.py</summary>
+
+![data.py](docs/features/meal-validation.png)
+</details>
+
+<details>
+<summary>validate.py</summary>
+
+![validate.py](docs/features/meal-validation.png)
+</details>
+
+<details>
+<summary>colors.py</summary>
+
+![colors.py](docs/features/meal-validation.png)
+</details>
 
 
 
@@ -559,116 +616,210 @@ The testing approach is as follows:
 <img src="docs/testing/user_stories/story4a.jpg">
 </details>
 
-5. 
+5. I want to be informed why my input is not valid 
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| user input validations| user input is otutside parameters or invalid| Red text displayed informing user on invalid input| Works as expected| 
 
+<details><summary>Screenshot1</summary>
+<img src="docs/testing/user_stories/story5.jpg">
 
-<details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-5-a.JPG">
-<img src="docs/testing/user-story-5-b.JPG">
-<img src="docs/testing/user-story-5-c.JPG">
-<img src="docs/testing/user-story-5-d.JPG">
+</details>
+<details><summary>Screenshot2</summary>
+<img src="docs/testing/user_stories/story5a.jpg">
+
+</details>
+<details><summary>Screenshot3</summary>
+<img src="docs/testing/user_stories/story5b.jpg">
+
 </details>
 
-6.
+6. I want input parameters to be displayed clearly
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Creating players | parameters for input displayed| user inputs valid input |Works as expected| 
+| Meals Menu |  parameters for input displayed |user inputs valid input |Works as expected| 
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user_stories/story6.jpg">
 
+</details>
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user_stories/story6a.jpg">
 
-<details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-6-a.JPG">
-<img src="docs/testing/user-story-6-b.JPG">
 </details>
 
-7.
+
+7. I want to see what choices i made
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-
+| Created players table | user inputs are valid | table is presented to user | Works as expected| 
+| Trainings-choosed|  user inputs are valid | training choices are displayed | Works as expected| 
+| Meals-choosed |  user inputs are valid | meal choices are displayed | Works as expected|
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-story-7.jpg">
+<img src="docs/testing/user_stories/story7.jpg">
+</details>
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user_stories/story7a.jpg">
+</details>
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user_stories/story7b.jpg">
 </details>
 
-8. 
+8. I want to be able to play multiple times without loging in again 
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-
+| End or play again menu | All input values are valid | End game menu presented | Works as expected|
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-8-a.JPG">
-<img src="docs/testing/user-story-8-b.JPG">
+<img src="docs/testing/user_stories/story8.jpg">
 </details>
 
-9. 
+9. I want to use the program with real-world data 
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-
+| Creating players |user credentials are validated| real-world parameters presented to user | Works as expected|
+| Trainings menu | user successfully created players | real-world parameters presented to user | Works as expected|
+| Meals Menu | user assigned trainings to players |real-world parameters presented to user | Works as expected|
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-9.jpg">
+<img src="docs/testing/user_stories/story9.jpg">
+</details>
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user_stories/story9a.jpg">
+</details>
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user_stories/story9b.jpg">
 </details>
 
-10. 
+10. I want to use the program that allows certain creativity inside parameters
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-
+| Creating players | user credentials are validated| various inputs inside parameters gives creativity to user |Works as expected|
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-10-a.jpg">
-<img src="docs/testing/user-story-10-b.jpg">
-<img src="docs/testing/user-story-10-c.jpg">
+<img src="docs/testing/user_stories/story9.jpg">
 </details>
 
-11.  
+11. I want to know the final result of using the program 
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-
+|Final value and thank you note| all previous inputs were valid | user presented with final team performance value | Works as expected|
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-11-a.jpg">
-<img src="docs/testing/user-story-11-b.jpg">
-<img src="docs/testing/user-story-11-c.jpg">
+<img src="docs/testing/user_stories/story11.jpg">
 </details>
 
-12. 
+12. I want user to easily and intuitevly navigates troughout program 
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-
+| Options menu 2 | user can choose between 2 options| user taken to desired direction depending on input |Works as expected|
+| End or play again menu | user can choose between 2 options| user taken to desired direction depending on input |Works as expected|
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-story-12.jpg">
+<img src="docs/testing/user_stories/story12-12b=8a.jpg">
+</details>
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user_stories/story8.jpg">
 </details>
 
-13.  
+13. I want user to be guided and informed how to make valid inputs 
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| User Input Validation | user input is otutside parameters or invalid| Red text displayed informing user on invalid input| Works as expected|   
 
-
-<details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-13-a.jpg">
-<img src="docs/testing/user-story-13-b.jpg">
+<details><summary>Screenshot1</summary>
+<img src="docs/testing/user_stories/story13.jpg">
+</details>
+<details><summary>Screenshot2</summary>
+<img src="docs/testing/user_stories/story13a.jpg">
+</details>
+<details><summary>Screenshot3</summary>
+<img src="docs/testing/user_stories/story13b.jpg">
 </details>
 
-14.
+14. I want user to be able to personalize his experience and inputs
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-
+| Creating players | user input can be anything inside given parameters| personalized valid input and experience| Works as expected| 
+| Create user(Sign-up) |  user input can be anything inside given parameters| personalized valid input and experience| Works as expected|
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-14-a.jpg">
-<img src="docs/testing/user-story-14-b.jpg">
+<img src="docs/testing/user_stories/story9.jpg">
 </details>
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user_stories/story3.jpg">
+</details>
+
+15. I want user to have clear feedback of inputs
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Training choosed | valid training inputs | trainings choosed presented to user|Works as expected|
+| Meals choosed | valid meal inputs| meals choosed presented to user|Works as expected|
+| Created players table | valid inputs when creating players | table with player values presented |Works as expected|
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user_stories/story7a.jpg">
+</details>
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user_stories/story7b.jpg">
+</details>
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user_stories/story7.jpg">
+</details>
+
+16. I want user details to be stored and retrieved on demand into the database
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Create user(Sign-up) | input valid credentials for user | user credentials stored in database | Works as expected|
+| Validate exsisting user(Log-in) | input valid email | email is retrieved from database and user is greeted | Works as expected|
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user_stories/story3.jpg">
+</details>
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user_stories/story3a.jpg">
+</details>
+
+17. I want user to have option to exit the program
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Options menu 1 | user can choose option to exit program | program is terminated | Works as expected|
+| End or play again menu | user can choose option to exit program | program is terminated | Works as expected|
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user_stories/story2.jpg">
+</details>
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user_stories/story8.jpg">
+</details>
+
+18. I want user to know the final result
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Final value and thank you note | after all inputs are valid and inside given parameters | final result presented |Works as expected|
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user_stories/story11.jpg">
+</details>
+
 
 </details>
 
