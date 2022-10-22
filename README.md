@@ -842,7 +842,9 @@ Initial error called - 'TypeError: object of type 'int' has no len()'
 
 | **Bug** | **Fix** |
 | ------- | ------- |
-
+| In validating user inputs when creating player pycodestyle was warning about "too broad exception" in while loop.| add  "ValueError" whan catching the exception with suitable error message|
+| When breaking a too long line of code forgot to put (\) to move on next line and didnt match previous indentation| putting (\) when moving on next line and press (tab)
+to match previous line indentation|
 
 ## Deployment
 
