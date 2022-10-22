@@ -519,32 +519,32 @@ python files in my project. All files are cleared of errors and are up to PEP8 s
 <details>
 <summary>run.py</summary>
 
-![run.py](docs/features/meal-validation.png)
+![run.py](docs/validation/run.py.png)
 </details>
 
 <details>
 
 <summary>player.py</summary>
 
-![player.py](docs/features/meal-validation.png)
+![player.py](docs/validation/player.py.png)
 </details>
 
 <details>
 <summary>data.py</summary>
 
-![data.py](docs/features/meal-validation.png)
+![data.py](docs/validation/data.py.png)
 </details>
 
 <details>
 <summary>validate.py</summary>
 
-![validate.py](docs/features/meal-validation.png)
+![validate.py](docs/validation/validate.py.png)
 </details>
 
 <details>
 <summary>colors.py</summary>
 
-![colors.py](docs/features/meal-validation.png)
+![colors.py](docs/validation/colors.py.png)
 </details>
 
 

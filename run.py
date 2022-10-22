@@ -6,11 +6,10 @@ import click
 import validate as val
 from player import Player
 import requests
-import time 
+import time
 import sys
 from data import insert_rows, WK1, show_table1, show_table2,\
         user_score, insert_rows2, WK3
-
 from colors import Fore
 from typing import List
 
