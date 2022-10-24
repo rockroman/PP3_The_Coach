@@ -29,6 +29,7 @@ The requirements of this project were use of Python programming language and it'
     - [Frameworks & Tools](#frameworks--tools)
     - [Libraries](#libraries)
   - [Features](#features)
+  - [Future-features](#future-features-to-implement)
   - [Validation](#validation)
   - [Testing](#testing)
     - [Manual Testing](#manual-testing)
@@ -510,6 +511,17 @@ inside given parameters
 
 [Back to Table Of Contents](#table-of-contents)
 
+## Future features to implement
+
+<hr>
+
+- Future development of this program would very likely include
+1. Training options for longer period of time(week)
+2. Diet schedule period of (week or more)
+3. Rest schedule period of(week or more)
+4. Implementing calculation of training impact to individual athlete and adding that calculation to 
+final percentage
+
 ## Validation
 
 - Since  [PEP8 Validation Service](http://pep8online.com/) site is down and can't be used
@@ -854,13 +866,13 @@ to match previous line indentation|
 Application has been deployed from GitHub to Heroku by following the steps:
 
 1. Create or log in to your account at heroku.com
-2. Create a new app, add a unique app name (this project is named "ci-pp3-connect4") and choose your region
+2. Create a new app, add a unique app name ( for example PP3_The_Coach) and then choose your region
 3. Click on create app
 4. Go to "Settings"
 5. Under Config Vars store any sensitive data you saved in .json file. Name 'Key' field, copy the .json file and paste it to 'Value' field. Also add a key 'PORT' and value '8000'.
-6. Add required buildpacks (further dependencies). For this project, I set up 'Python' and 'node.js' in that order.
+6. Add required buildpacks (further dependencies). For this project, set it up so Python will be on top and Node.js on bottom
 7. Go to "Deploy" and select "GitHub" in "Deployment method"
-8. To link up our Heroku app to our Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below
+8.To connect Heroku app to your Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below
 9.  Choose the branch you want to buid your app from
 10. If prefered, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
 11. Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
@@ -868,7 +880,7 @@ Application has been deployed from GitHub to Heroku by following the steps:
 ### Forking the GitHub Repository
 1. Go to the GitHub repository
 2. Click on Fork button in top right corner
-3. You will then have a copy of the repository in your own GitHub account.
+3. Copy of the repository will be in your own GitHub account.
    
 ### Making a Local Clone
 1. Go to the GitHub repository 
