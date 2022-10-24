@@ -218,11 +218,9 @@ and his previous result is cleared from the database
 
 ### Flowchart
 
-The following flowchart summarises the structure and logic of the application.
+ - This Flowchart summarises the structure and logic of the application.
 
-<details><summary>Flowchart</summary>
-<img >
-</details>
+[Flowchart-The_Coach](docs/features/The_Coach_flow.pdf)
 
 ### Data models
 <hr>
