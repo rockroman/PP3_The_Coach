@@ -1,5 +1,7 @@
 # THE COACH
 
+(Developer: Roman Rakic)
+
 [Live live website -->](https://romanscoach.herokuapp.com/)
 
 ![Mockup image](docs/features/mockup-img.png)
@@ -523,6 +525,7 @@ inside given parameters
 final percentage
 
 ## Validation
+<hr>
 
 - Since  [PEP8 Validation Service](http://pep8online.com/) site is down and can't be used
 PEP8 validator "pycodestyle" was installed directly to  Gitpod Workspace and Im uploading images of all 
@@ -896,10 +899,11 @@ Application has been deployed from GitHub to Heroku by following the steps:
 ## Credits
 
 ### Code
--  [gspread documentation](https://docs.gspread.org/en/latest/user-guide.html) explained how to obtain a specific value from the google spreadsheet
+-  [gspread documentation](https://docs.gspread.org/en/latest/user-guide.html) explained how to create read update and delete  values in the google spreadsheet
 - [CalorieNinjas-API-Documentation](https://calorieninjas.com/api) - helped me in making function that calculates caloric value of user choices for each player.
 - [ASCII Art Generator](http://patorjk.com/software/taag/) was used to create game title
-- Code Institute -code from "Love Sandwiches - Essentials Project" helped me to connect  Google Spreadsheet to my project.
+
+- Code Institute -  "Love Sandwiches - Essentials Project" walktrough  helped me to connect  Google Spreadsheet to my project.
 
 - How to install a Python module, eg. [email validation](https://pypi.org/project/email-validator/Installing)
 
@@ -911,3 +915,12 @@ Application has been deployed from GitHub to Heroku by following the steps:
 
 
 ## Acknowledgements
+
+***
+I would like to take a few moments to say Thank you to following people:
+
+- First i would like to thank my wife Una and my daughter Tara for continuous support and understanding while working on development of this project.
+
+-  I would like to thank my Mentor Mo.Shami for his support ,insight expertise and guidance.
+- [Warwick Hart](https://github.com/BobWritesCode) for some great ideas and feedback when reviewing project.
+-  Awesome Code Institute Slack community for being there
