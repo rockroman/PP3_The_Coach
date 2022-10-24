@@ -385,7 +385,7 @@ def player_nutrition_score() -> int:
     return nutrition_score
 
 
-def overall_player_score(each):
+def overall_player_score(each) -> int:
     """
     function tahat calculates overall
     player score and will be used in loop

@@ -1,6 +1,7 @@
 import unittest
-from validate import display_menu
 from unittest.mock import patch
+from validate import display_menu
+# from unittest import mock
 
 
 # class TestDisplayMenu(unittest.TestCase):
@@ -25,17 +26,44 @@ from unittest.mock import patch
 
 # # ----up working-----
 
-
-class TestDisplayMenu(unittest.TestCase):
+class TestValidate(unittest.TestCase):
     """
     testing  for user input   
     between two options offered
     """
-    @patch('builtins.input', return_value='a')
-    def test_display_menu_good_input(self, mock_input):
-        result = display_menu
-        self.assertEqual(result,'a')
+    @patch("builtins.input", return_value="a") 
+    def test_a(self, patched_input):
+        status = display_menu()
+        self.assertEqual(status,"a")
+
+    @patch("builtins.input", return_value="b")
+    def test_b(self, patched_input):
+        status = display_menu()
+        self.assertEqual(status, "a")
 
 
-if __name__ == '__main__':
+# class TestValidate(unittest.TestCase):
+#     @patch("validate.exsisting_user")
+#     @patch("validate.new_user")
+#     @patch("builtins.input", return_value="a")
+#     def test_a(self, patched_input, patched_new_user, patched_exsisting_user):
+#         status = display_menu()
+
+#         self.assertEqual(status, "a")
+#         patched_new_user.assert_called()
+#         patched_exsisting_user.assert_not_called()
+
+#     @patch("validate.exsisting_user")
+#     @patch("validate.new_user")
+#     @patch("builtins.input", return_value="b")
+#     def test_b(self, patched_input, patched_new_user, patched_exsisting_user):
+#         status = display_menu()
+
+#         self.assertEqual(status, "b")
+#         patched_new_user.assert_not_called()
+#         patched_exsisting_user.assert_called()
+       
+
+if __name__ == "__main__":
     unittest.main()
+

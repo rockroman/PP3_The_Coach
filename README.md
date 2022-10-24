@@ -845,11 +845,13 @@ Initial error called - 'TypeError: object of type 'int' has no len()'
 | In validating user inputs when creating player pycodestyle was warning about "too broad exception" in while loop.| add  "ValueError" whan catching the exception with suitable error message|
 | When breaking a too long line of code forgot to put (\) to move on next line and didnt match previous indentation| putting (\) when moving on next line and press (tab)
 to match previous line indentation|
+|when using Colorama and keyword "Fore" to color the  choices that requires user input ,user input was in last color of choice(red)|I colored the blank space white before closing colored choices line so anything inputed after that would be in white color|
+|When creating subclass palyer in a for loop and keyword range i set the wrong range cause last number in range is not included|change last number in range to one greater 
 
 ## Deployment
 
 ### Heroku
-This application has been deployed from GitHub to Heroku by following the steps:
+Application has been deployed from GitHub to Heroku by following the steps:
 
 1. Create or log in to your account at heroku.com
 2. Create a new app, add a unique app name (this project is named "ci-pp3-connect4") and choose your region
@@ -870,7 +872,7 @@ This application has been deployed from GitHub to Heroku by following the steps:
    
 ### Making a Local Clone
 1. Go to the GitHub repository 
-2. Locate the Code button above the list of files and click it
+2. Locate the Code button above the list of files (next to 'Add file') and click it
 3. Highlight the "HTTPS" button to clone with HTTPS and copy the link
 4. Open Git Bash
 5. Change the current working directory to the one where you want the cloned directory
@@ -881,22 +883,19 @@ This application has been deployed from GitHub to Heroku by following the steps:
 
 ## Credits
 
-### Images
-- [Flaticon](https://www.flaticon.com/free-icon/connect_1707222) was used for the website favicon
-
 ### Code
+-  [gspread documentation](https://docs.gspread.org/en/latest/user-guide.html) explained how to obtain a specific value from the google spreadsheet
+- [CalorieNinjas-API-Documentation](https://calorieninjas.com/api) - helped me in making function that calculates caloric value of user choices for each player.
 - [ASCII Art Generator](http://patorjk.com/software/taag/) was used to create game title
-- Code Institute - for git template IDE and "Love Sandwiches - Essentials Project" which helped me with connecting the Google Spreadsheet to my project.
+- Code Institute -code from "Love Sandwiches - Essentials Project" helped me to connect  Google Spreadsheet to my project.
 
 - How to install a Python module, eg. [email validation](https://pypi.org/project/email-validator/Installing)
-- [gspread documentation](https://docs.gspread.org/en/latest/user-guide.html) explained how to obtain a specific value from the google spreadsheet
-- Instructions how to print colored text from [this](https://ozzmaker.com/add-colour-to-text-in-python/) and [this](https://stackabuse.com/how-to-print-colored-text-in-python/) sources
-- 
-- [Stack overflow]code used to clear the terminal console
-- Youtube video on [Unit Test in Python](https://www.youtube.com/watch?v=1Lfv5tUGsn8) made by Socratica was very helpful to understand the concept of unit tesing
 
-<details><summary>See winning move schemat</summary>
-<img src="docs/winning-move- logic-schemat.jpg">
-</details>
+- How to add colored text to Python terminal [colorama(0.4.5)](https://pypi.org/project/colorama/)
+ 
+- [code](https://click.palletsprojects.com/en/8.0.x/utils/) used to clear the terminal console
+
+
+
 
 ## Acknowledgements
