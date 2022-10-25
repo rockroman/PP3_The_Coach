@@ -43,14 +43,10 @@ The requirements of this project were use of Python programming language and it'
 
 ## Project Goals
 <hr>
-- The Coach program is intended to be the beginning of possible
-real-world application used in sports by coaches, mentors and even
-athletes themself.With certain upgrades and some more real-world based 
-calculations in regard of caloric values and influences of certain training routines to athlete's bodies this program could provide value and assist
-in optimizing the team and individual performance of an athlete.
+- The Coach program is intended to be the beginning of possible real-world application used in sports by coaches, mentors, and even athletes themself. With certain upgrades and some more real-world-based calculations in regard of caloric values and influences of certain training routines on athletes' bodies, this program could provide value and assist in optimizing the team and individual performance of an athlete.
 
 ### User Goals
-- Interact with program that is fun and easy to understand
+- Interact with the program that is fun and easy to understand
 - Use a program that has real-life potential
 - Be able to Log in and come back to the existing account
 - Create something fun and unique 
@@ -68,19 +64,19 @@ in optimizing the team and individual performance of an athlete.
 ### Target Audience
 
 - Sports enthusiasts
-- Coahing enthusiasts
+- Coaching enthusiasts
 - Strategic thinkers
 
 
 
 ### User Requirements and Expectations
 
-- Simple easy to use and understand program
+- Simple easy to use and understand the program
 - Intuitive navigation
 - Engaging content
 - Possibility of creativity inside certain parameters
 - Personalization (usernames and player names)
-- Feedback to user in different stages of programm
+- Feedback to a user in different stages of program
 - Final result
 
 
@@ -90,17 +86,17 @@ in optimizing the team and individual performance of an athlete.
 <details><summary>Click here to view instructions</summary>
 
 #### Overview
-- Using this program user will create 5 players inside given parameters that allow certain creativity.In the next stage user will choose 3 different types of training ,each training got a value (that is not presented to a user, but user is warned that the higher the number of training that value is  higher)
-that will Carry a half of the player overall value.next stage calls user to pick 3 food options for each player.also each option has a caloric value (not presented to a user ). so user has to use common sense for food options ,cause caloric value of the food will be compared to a user active metabolic rate that is calculated after input values for each player.Food options will carry another half of player value. final stage of program is giving feedback to user with final result got with calculating both halfs of user value and than getting overall value of team in percentage
+- Using this program user will create 5 players inside given parameters that allow certain creativity. In the next stage, user will choose 3 different types of training, each training option got holds a value (that is not presented to the user, but the user is warned that the higher the number of training the value is  higher)
+that will Carry half of the player's overall value. next stage calls user to pick 3 food options for each player. also each option has a caloric value (not presented to a user ). so user has to use common sense for food options,cause the caloric value of the food will be compared to a user active metabolic rate that is calculated after input values for each player. Food options will carry another half of player value. final stage of the program is giving feedback to user with the final result got with calculating both halves of user value and then getting an overall value of the team in percentage
 
 
 #### Main Menu
 
-- Main menu is presented to user with ASCII art of the program title
-and short description of program instuctions.
-at the bottom of menu user is presented with 2 options 
-option to proceed and option to exit the program
-input validation is implemented troughout program so if invalid or outside parameters input is given user will be prompted to repeat the input  
+- The main menu is presented to the user with ASCII art of the program title
+and a short description of program instructions.
+at the bottom of the menu user is presented with 2 options 
+option to proceed and the option to exit the program
+input validation is implemented throughout program so if invalid or outside parameters input is given user will be prompted to repeat the input  
 
 ### exit
 - program is terminated  
@@ -118,13 +114,13 @@ another 2 options
  - user is asked to create username and to put
  the email.
  - user email is validated with python (email_validator) library 
- - after both inputs are validated user credentials are stored into th database(google spreadsheet)
+ - after both inputs are validated user credentials are stored in the database(google spreadsheet)
 
 
 #### existing user
 
 - this option will returnig user to input
-email adress. if email is found in database program will retrieve users username and greet user with username and percentage(score) user had on his last use of the program
+email adress. if email is found in the database program will retrieve users username and greet user with username and percentage(score) user had on his last use of the program
 
 #### Program
  
@@ -133,14 +129,15 @@ validation process
 
 Operation: Input numbers and characters then press enter key.
 
-#### players data table
+#### players data table 
 
-- after creating a team user is presented with table 
+- after creating a team user is presented with the table 
 consisting of his inputs for each player and active metabolic rate value calculated based on inputs.
+
 
 ##### training
 
-- user will have to assign 3 training options to each player and each option has certain value
+- user will have to assign 3 training options to each player and each option has a certain value
  validation of inputs is implemented also.
 
 Operation: Input a numeric value and press enter key.
@@ -837,6 +834,7 @@ The testing approach is as follows:
 </details>
 
 ### Automated Testing
+<hr>
 <details><summary> unit testing</summary>
 
 - Tests are run  using Python unittest library
@@ -844,22 +842,27 @@ The testing approach is as follows:
 part of project was tested.
 - User score function was tested for various inputs .
 
-<details><summary>Test passed (various inputs)</summary>
-<img src="docs/testing/unit_test/user_score_valid.png">
-</details>
+
+![Test passed (various inputs)](docs/testing/unit_test/user_score_valid.png)
 
 - when tested with empty string input typeError should be raised (since function is appending score value that should be int or float value)
 so I had to write some more validation for this function
 
-<details><summary>Test Failed(empty string)</summary>
-<img src="docs/testing/unit_test/user_score_not_raises.png">
-</details>
+
+![Test Failed(empty string)](docs/testing/unit_test/user_score_not_raises.png)
+
 
 - After adding code so that typeError is raised on invalid input unit test passed 
-<details><summary>Test passed</summary>
-<img src="docs/testing/unit_test/user_score_type_ok.png">
-</details>
 
+![Test passed](docs/testing/unit_test/user_score_type_ok.png)
+
+<hr>
+- Testing display menu function in (validate.py) file
+since this function is more complex and function that is called from that function is based on user input
+after doing research and got question answered on stackoverflow,only behaviour of the function is tested.
+and after both tests passed function is calling the right function based on user input
+
+![Test passed](docs/testing/unit_test/display_menu.png)
 </details>
 
 [Back to Table Of Contents](#table-of-contents)
@@ -868,7 +871,7 @@ so I had to write some more validation for this function
 | **Bug** | **Fix** |
 | ------- | ------- |
 | In validating user inputs when creating player pycodestyle was warning about "too broad exception" in while loop.| add  "ValueError" whan catching the exception with suitable error message|
-| When breaking a too long line of code forgot to put "\" to move on next line and didnt match previous indentation| putting "\" when moving on next line and press (tab)
+| When breaking a too long line of code forgot to put "backslash(`\`)" to move on next line and didnt match previous indentation| putting "backslash(`\`)" when moving on next line and press (tab)
 to match previous line indentation|
 |when using Colorama and keyword "Fore" to color the  choices that requires user input ,user input was in last color of choice(red)|I colored the blank space white before closing colored choices line so anything inputed after that would be in white color|
 |When creating subclass palyer in a for loop and keyword range i set the wrong range cause last number in range is not included|change last number in range to one greater 
@@ -922,6 +925,8 @@ Application has been deployed from GitHub to Heroku by following the steps:
 - [code](https://click.palletsprojects.com/en/8.0.x/utils/) used to clear the terminal console
 
 - [you tube channel](https://www.youtube.com/watch?v=sVeu_W9Lp8s&t=44s)-code and help in better understanding unit test
+
+-[stackoverflow-user](https://stackoverflow.com/users/2745495/gino-mempin)- for clearing up how to write unit test for more complex function and using mock in unit test
 
 
 
