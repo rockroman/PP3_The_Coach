@@ -226,10 +226,10 @@ and his previous result is cleared from the database
 <hr>
 
 - OOP(object oriented programming) was implemented in certain parts of this programm
-- classes -- One class was used to create all players with certain attributes(name,age,weight,height),
+- Classes -- One class was used to create all players with certain attributes(name,age,weight,height),
 and method that calculates active metabolic rate of each player.
-- lists -- usage of lists in program is quite often because most of operations and calculations required repetition and iteration multiple times.
-- google sheets API - used to manipulate data(CRUD- create ,read update and delete)
+- Lists -- usage of lists in program is quite often because most of operations and calculations required repetition and iteration multiple times.
+- Google sheets API - used to manipulate data(CRUD- create ,read update and delete)
 - Calorie ninjas API - used to retrieve caloric value from users input 
 
 ## Technologies Used
@@ -242,7 +242,7 @@ and method that calculates active metabolic rate of each player.
 
 ### Frameworks & Tools
 
-- []() was used to draw program flowchart
+- [Lucidchart](https://www.lucidchart.com/) was used to draw program flowchart
 
 - [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
 - [GitHub](https://github.com/) was used as a remote repository to store project code
@@ -261,7 +261,7 @@ VSCode was used to write the project code using Code Institute template
 - typing -used for type hints and return data types in python code
 - sys & sleep - used to create a typing effect troughout the project
 - time - used to displayed delayed messages in the terminal
-- [unittest](https://docs.python.org/3/library/unittest.html) - used to carry out testing on single units in validation.py file
+- [unittest](https://docs.python.org/3/library/unittest.html) - is used to do automated testing(part of the program)
 
 #### Third Party Libraries
 - [requests ](https://pypi.org/project/requests/)- used this library to call [CalorieNinjas API](https://calorieninjas.com/api) and get caloric values of assigned meals 
@@ -299,7 +299,7 @@ VSCode was used to write the project code using Code Institute template
 
 ### Options menu 1
 
-- provide 2 options for a user
+- Provide 2 options for a user
 to proceed or exit a program
 - user story covered: 17,16,12,2
 <details>
@@ -323,11 +323,11 @@ as an existing user
 ### Create user(Sign-up)
 
 - User is prompted to make a username
-- validating username input
-- user asked to provide valid email address
-- informs user is email in valid format
-- saving credentials into the Google Spreadsheet
-- user story covered: 3,16,5,14
+- Validating username input
+- User asked to provide valid email address
+- Informs user is email in valid format
+- Saving credentials into the Google Spreadsheet
+- User story covered: 3,16,5,14
 <details>
 <summary>Screenshot</summary>
 
@@ -837,16 +837,28 @@ The testing approach is as follows:
 </details>
 
 ### Automated Testing
-<details><summary>See unit testing</summary>
+<details><summary> unit testing</summary>
 
-- I wrote unit tests using Python unittest library
-- I tested separate functions to verify correct user input:
-  - validation of user email and user name input
+- Tests are run  using Python unittest library
+- Since i was introduced to "unit testing " when most of source code for program was almost finished only small
+part of project was tested.
+- User score function was tested for various inputs .
 
-I needed to amend the function and add 'Try Except' blocks to handle TypeError.
-Initial error called - 'TypeError: object of type 'int' has no len()'
+<details><summary></summary>
+<img src="docs/testing/unit_test/user_score_valid.png">
+</details>
 
+- when tested with empty string input typeError should be raised (since function is appending score value that should be int or float value)
+so I had to write some more validation for this function
 
+<details><summary></summary>
+<img src="docs/testing/unit_test/user_score_not_raises.png">
+</details>
+
+- After adding code so that typeError is raised on invalid input unit test passed 
+<details><summary></summary>
+<img src="docs/testing/unit_test/user_score_type_ok.png">
+</details>
 
 </details>
 
@@ -856,7 +868,7 @@ Initial error called - 'TypeError: object of type 'int' has no len()'
 | **Bug** | **Fix** |
 | ------- | ------- |
 | In validating user inputs when creating player pycodestyle was warning about "too broad exception" in while loop.| add  "ValueError" whan catching the exception with suitable error message|
-| When breaking a too long line of code forgot to put (\) to move on next line and didnt match previous indentation| putting (\) when moving on next line and press (tab)
+| When breaking a too long line of code forgot to put ("\") to move on next line and didnt match previous indentation| putting ("\") when moving on next line and press (tab)
 to match previous line indentation|
 |when using Colorama and keyword "Fore" to color the  choices that requires user input ,user input was in last color of choice(red)|I colored the blank space white before closing colored choices line so anything inputed after that would be in white color|
 |When creating subclass palyer in a for loop and keyword range i set the wrong range cause last number in range is not included|change last number in range to one greater 

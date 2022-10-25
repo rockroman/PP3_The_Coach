@@ -43,7 +43,7 @@ def new_user() -> None:
         username = input("Please enter your username: \n ")
         if not re.match(r'^[a-zA-z0-9]{2,12}$', username):
             print(
-                    Fore.RED + 'userame must be 2 to 12 characters long\
+                    Fore.RED + 'username must be 2 to 12 characters long\
  and contain letters and numbers')
             continue
         break

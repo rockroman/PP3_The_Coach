@@ -87,5 +87,7 @@ def user_score(val: int) -> int:
     append or update users
     team performance score in google spreadsheet
     """
+    if type(val) not in [int, float]:
+        raise TypeError("Int or float inputs only")
     WK2.update("C1", val)
     return val
