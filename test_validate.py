@@ -4,32 +4,6 @@ from validate import display_menu
 # from unittest import mock
 
 
-# class TestDisplayMenu(unittest.TestCase):
-#     """
-#     testing  for user input   
-#     between two options offered
-#     """
-#     def test_display_menu_good_input(self):
-#         actual_input = 'b'
-#         expected_input = ('a', 'b')
-#         self.assertIn(actual_input, expected_input)
-
-#     def test_display_menu_another_good_input(self):
-#         actual_input = 'a'
-#         expected_input = ('a', 'b')
-#         self.assertIn(actual_input, expected_input)
-
-#     def test_display_menu_another_invalid_input(self):
-#         actual_input = 2
-#         expected_input = ('a', 'b')
-#         self.assertNotIn(actual_input, expected_input)
-
-# # ----up working-----
-
-
-
-
-
 class TestValidate(unittest.TestCase):
     """
     testing  for user input   
@@ -54,6 +28,31 @@ if __name__ == "__main__":
     unittest.main()
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # class TestValidate(unittest.TestCase):
 #     @patch("validate.exsisting_user")
 #     @patch("validate.new_user")
@@ -74,8 +73,5 @@ if __name__ == "__main__":
 #         self.assertEqual(status, "b")
 #         patched_new_user.assert_not_called()
 #         patched_exsisting_user.assert_called()
-  
 
-if __name__ == "__main__":
-    unittest.main()
 

@@ -844,19 +844,19 @@ The testing approach is as follows:
 part of project was tested.
 - User score function was tested for various inputs .
 
-<details><summary></summary>
+<details><summary>Test passed (various inputs)</summary>
 <img src="docs/testing/unit_test/user_score_valid.png">
 </details>
 
 - when tested with empty string input typeError should be raised (since function is appending score value that should be int or float value)
 so I had to write some more validation for this function
 
-<details><summary></summary>
+<details><summary>Test Failed(empty string)</summary>
 <img src="docs/testing/unit_test/user_score_not_raises.png">
 </details>
 
 - After adding code so that typeError is raised on invalid input unit test passed 
-<details><summary></summary>
+<details><summary>Test passed</summary>
 <img src="docs/testing/unit_test/user_score_type_ok.png">
 </details>
 
@@ -868,7 +868,7 @@ so I had to write some more validation for this function
 | **Bug** | **Fix** |
 | ------- | ------- |
 | In validating user inputs when creating player pycodestyle was warning about "too broad exception" in while loop.| add  "ValueError" whan catching the exception with suitable error message|
-| When breaking a too long line of code forgot to put ("\") to move on next line and didnt match previous indentation| putting ("\") when moving on next line and press (tab)
+| When breaking a too long line of code forgot to put "\" to move on next line and didnt match previous indentation| putting "\" when moving on next line and press (tab)
 to match previous line indentation|
 |when using Colorama and keyword "Fore" to color the  choices that requires user input ,user input was in last color of choice(red)|I colored the blank space white before closing colored choices line so anything inputed after that would be in white color|
 |When creating subclass palyer in a for loop and keyword range i set the wrong range cause last number in range is not included|change last number in range to one greater 
@@ -920,6 +920,8 @@ Application has been deployed from GitHub to Heroku by following the steps:
 - How to add colored text to Python terminal [colorama(0.4.5)](https://pypi.org/project/colorama/)
  
 - [code](https://click.palletsprojects.com/en/8.0.x/utils/) used to clear the terminal console
+
+- [you tube channel](https://www.youtube.com/watch?v=sVeu_W9Lp8s&t=44s)-code and help in better understanding unit test
 
 
 
