@@ -2,7 +2,7 @@
 
 (Developer: Roman Rakic)
 
-[Live live website -->](https://romanscoach.herokuapp.com/)
+[THE COACH >>> Live live website ](https://romanscoach.herokuapp.com/)
 
 ![Mockup image](docs/features/mockup-img.png)
 
@@ -43,6 +43,7 @@ The requirements of this project were use of Python programming language and it'
 
 ## Project Goals
 <hr>
+
 - The Coach program is intended to be the beginning of possible real-world application used in sports by coaches, mentors, and even athletes themself. With certain upgrades and some more real-world-based calculations in regard of caloric values and influences of certain training routines on athletes' bodies, this program could provide value and assist in optimizing the team and individual performance of an athlete.
 
 ### User Goals
@@ -86,8 +87,8 @@ The requirements of this project were use of Python programming language and it'
 <details><summary>Click here to view instructions</summary>
 
 #### Overview
-- Using this program user will create 5 players inside given parameters that allow certain creativity. In the next stage, user will choose 3 different types of training, each training option got holds a value (that is not presented to the user, but the user is warned that the higher the number of training the value is  higher)
-that will Carry half of the player's overall value. next stage calls user to pick 3 food options for each player. also each option has a caloric value (not presented to a user ). so user has to use common sense for food options,cause the caloric value of the food will be compared to a user active metabolic rate that is calculated after input values for each player. Food options will carry another half of player value. final stage of the program is giving feedback to user with the final result got with calculating both halves of user value and then getting an overall value of the team in percentage
+- Using this program user will create 5 players inside given parameters that allow certain creativity. In the next stage, user will choose 3 different types of training, each training option  holds a value (that is not presented to the user, but the user is warned that the higher the number of training the value is  higher)
+that will Carry half of the player's overall value. next stage calls user to pick 3 food options for each player. also each option has a caloric value (not presented to a user ). so user has to use common sense for food options,cause the caloric value of the food will be compared to a user active metabolic rate that is calculated after input values for each player. Food options will carry another half of player value. Final stage of the program presenting the user with the final result.Final percentage is calculated by calculating both halves of player value and then getting an overall value of the team in percentage
 
 
 #### Main Menu
@@ -170,7 +171,7 @@ Operation: Input a numeric value and press enter key.
 
 #### go again
 
-- user is returned back to create team 
+- user is returned back to create a team 
 and his previous result is cleared from the database 
 
 
@@ -186,26 +187,26 @@ and his previous result is cleared from the database
 
 ### Users
 
-1. I want to have an idea what the program is about
+1. I want to have an idea of what the program is about
 2. I want to be able to have clear and simple navigation   
-3. I want to be able log in and return to a program later
+3. I want to be able to log in and return to a program later
 4. I want to be able to get feedback in different stages of program
 5. I want to be informed why my input is not valid
 6. I want input parameters to be displayed clearly
-7. I want to see what choices i made
-8. I want to be able to play multiple times without loging in again
+7. I want to see what choices I made
+8. I want to be able to play multiple times without logging in again
 9. I want to use the program with real-world data
-10. I want to use the program that allows certain creativity inside parameters
+10. I want to use a program that allows certain creativity inside parameters
 11. I want to know the final result of using the program  
 
 ### Site Owner
  
-12. I want user to easily and intuitevly navigates troughout program
+12. I want user to easily and intuitively navigate troughout program
 13. I want user to be guided and informed how to make valid inputs
 14. I want user to be able to personalize his experience and inputs
 15. I want user to have clear feedback from  inputs
 16. I want user details to be stored and retrieved on demand into the database
-17. I want user to have option to exit the program
+17. I want user to have the option to exit the program
 18. I want user to know the final result
 
 [Back to Table Of Contents](#table-of-contents)
@@ -222,9 +223,9 @@ and his previous result is cleared from the database
 ### Data models
 <hr>
 
-- OOP(object oriented programming) was implemented in certain parts of this programm
+- OOP(object oriented programming) was implemented in certain parts of this program
 - Classes -- One class was used to create all players with certain attributes(name,age,weight,height),
-and method that calculates active metabolic rate of each player.
+and method that calculates the active metabolic rate of each player.
 - Lists -- usage of lists in program is quite often because most of operations and calculations required repetition and iteration multiple times.
 - Google sheets API - used to manipulate data(CRUD- create ,read update and delete)
 - Calorie ninjas API - used to retrieve caloric value from users input 
@@ -239,12 +240,12 @@ and method that calculates active metabolic rate of each player.
 
 ### Frameworks & Tools
 
-- [Lucidchart](https://www.lucidchart.com/) was used to draw program flowchart
+- [Lucidchart](https://www.lucidchart.com/) was used to draw a program flowchart
 
 - [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
 - [GitHub](https://github.com/) was used as a remote repository to store project code
 - [Google Cloud Platform](https://cloud.google.com/cloud-console/) was used to manage access and permissions to the Google Services such as Google auth, sheets etc.
-- [Google Sheets](https://www.google.co.uk/sheets/about/) were used to store players details
+- [Google Sheets](https://www.google.co.uk/sheets/about/) were used to store player's details
 - [Heroku Platform](https://dashboard.heroku.com/) was used to deploy the project into live environment
 - [Font Awesome](https://fontawesome.com/) - icons from Font Awesome were used in the footer below the program terminal
 - [Visual Studio Code (VSCode)](https://code.visualstudio.com/)
@@ -254,15 +255,14 @@ VSCode was used to write the project code using Code Institute template
 
 #### Python Libraries
 - click - used to clear the terminal 
-- random - used to generate random palyer values inside given parameters
+- random - used to generate random player values inside given parameters
 - typing -used for type hints and return data types in python code
-- sys & sleep - used to create a typing effect troughout the project
+- sys & sleep - used to create a typing effect throughout the project
 - time - used to displayed delayed messages in the terminal
 - [unittest](https://docs.python.org/3/library/unittest.html) - is used to do automated testing(part of the program)
 
 #### Third Party Libraries
 - [requests ](https://pypi.org/project/requests/)- used this library to call [CalorieNinjas API](https://calorieninjas.com/api) and get caloric values of assigned meals 
-- []()-
 - [colorama](https://pypi.org/project/colorama/) - used this library to add color to the terminal and enhance user experience.  warning information is marked red while details that user can focus on with green color.Program title was colored blue 
 - [email_validator](https://pypi.org/project/email-validator/) - used this library to validate if user email input is in correct form
 - [gspread](https://docs.gspread.org/en/latest/) - JUSTIFICATION: used gspread for data manipulation inside  Google spreadsheet and  interaction with Google APIs
@@ -333,12 +333,12 @@ as an existing user
 
 ### Validate exsisting user(Log-in)
 
-- User is prompted to enter the valid email that is stored in database
+- User is prompted to enter the valid email that is stored in a database
 - validating email
-- if email is not in database user is taken step back to choose
+- if email is not in the database user is taken step back to choose
  between new user or existing user
- - if email is in database user is greeted with username
- and with last result achieved while using the program
+ - if email is in the database user is greeted with username
+ and with the last result achieved while using the program
 - user story covered: 15,3,16
 <details>
 <summary>Screenshot</summary>
@@ -926,7 +926,7 @@ Application has been deployed from GitHub to Heroku by following the steps:
 
 - [you tube channel](https://www.youtube.com/watch?v=sVeu_W9Lp8s&t=44s)-code and help in better understanding unit test
 
--[stackoverflow-user](https://stackoverflow.com/users/2745495/gino-mempin)- for clearing up how to write unit test for more complex function and using mock in unit test
+- [stackoverflow-user](https://stackoverflow.com/users/2745495/gino-mempin)- for clearing up how to write unit test for more complex function and using mock in unit test
 
 
 
