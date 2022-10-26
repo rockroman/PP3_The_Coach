@@ -2,6 +2,8 @@ import re
 from time import sleep
 import time
 import sys
+import os
+import termios
 from email_validator import validate_email, EmailNotValidError
 from data import SHEET
 from run import clrscr
@@ -90,11 +92,14 @@ def slow_print(item: str):
     prints the message letter by letter
     with specified time delay
     """
+    os.system("stty -echo")
     for char in item:
         sleep(0.05)
         sys.stdout.write(char)
         sys.stdout.flush()
     print(" ")
+    os.system("stty echo")
+    termios.tcflush(sys.stdin, termios.TCIOFLUSH)
 
 
 def program_title():
