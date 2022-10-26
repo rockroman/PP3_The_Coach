@@ -1,14 +1,19 @@
-import re
+# imports
+# -----------------------------------
+#  Python standard
 from time import sleep
 import time
 import sys
 import os
+import re
 import termios
+# 3rd party
 from email_validator import validate_email, EmailNotValidError
+# internal
 from data import SHEET
 from run import clrscr
 from colors import Fore
-
+# -------------------------------------------------------------
 
 WK2 = SHEET.worksheet('users')
 USER_DATA = []
@@ -123,4 +128,3 @@ def program_title():
     print(Fore.BLUE + '  ╚═════╝  ╚═════╝  ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝')
     print('###############################################')
     print('###############################################')
-

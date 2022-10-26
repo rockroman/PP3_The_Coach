@@ -1,10 +1,15 @@
+# imports
+# ---------------------
+# Python standard
 """
 regular expression mathcing
 operators python library regular exspressions
 can contain both special and ordinary characters
 """
 import re
+# internal
 from colors import Fore
+# ------------------------------------------------
 
 
 class Player:

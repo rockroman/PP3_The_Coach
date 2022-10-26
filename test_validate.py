@@ -1,6 +1,11 @@
+# imports
+# ----------------------------------
+#  Python standard
 import unittest
 from unittest.mock import patch
+# internal
 from validate import display_menu
+# ----------------------------------
 
 
 # code taken from question answered on stackoverflow!

@@ -1,8 +1,12 @@
+# imports
+# -----------------------------------
+#  Python standard
 from typing import List
+# 3rd party
 import gspread
 from google.oauth2.service_account import Credentials
 from tabulate import tabulate
-
+# -----------------------------------------------------------
 
 # code taken from love_sandwiches walk-through project
 # by Code Institute

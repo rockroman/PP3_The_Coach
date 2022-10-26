@@ -1,5 +1,10 @@
+# imports
+# ---------------------
+# Python standard
 import unittest
+# internal
 from data import user_score
+# ---------------------------
 
 
 class TestUserScore(unittest.TestCase):

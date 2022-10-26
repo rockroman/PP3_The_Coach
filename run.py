@@ -1,18 +1,20 @@
-"""
-random variable generator
-"""
+# imports
+# -----------------------------------
+#  Python standard
+import sys
+import time
 from random import randint
+from typing import List
 import click
+# 3rd party
+import requests
+# internal
 import validate as val
 from player import Player
-import requests
-import time
-import sys
 from data import insert_rows, WK1, show_table1, show_table2,\
         user_score, insert_rows2, WK3
 from colors import Fore
-from typing import List
-
+# --------------------------------------------------------------------
 
 my_players = []
 
