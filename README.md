@@ -262,11 +262,11 @@ VSCode was used to write the project code using Code Institute template
 - [unittest](https://docs.python.org/3/library/unittest.html) - is used to do automated testing(part of the program)
 
 #### Third Party Libraries
-- [requests ](https://pypi.org/project/requests/)- used this library to call [CalorieNinjas API](https://calorieninjas.com/api) and get caloric values of assigned meals 
-- [colorama](https://pypi.org/project/colorama/) - used this library to add color to the terminal and enhance user experience.  warning information is marked red while details that user can focus on with green color.Program title was colored blue 
-- [email_validator](https://pypi.org/project/email-validator/) - used this library to validate if user email input is in correct form
+- [requests ](https://pypi.org/project/requests/)-JUSTIFICATION: used this library to call [CalorieNinjas API](https://calorieninjas.com/api) and get caloric values of assigned meals 
+- [colorama](https://pypi.org/project/colorama/) -JUSTIFICATION: used this library to add color to the terminal and enhance user experience.  warning information is marked red while details that user can focus on with green color.Program title was colored blue 
+- [email_validator](https://pypi.org/project/email-validator/) - JUSTIFICATION: used this library to validate if user email input is in correct form
 - [gspread](https://docs.gspread.org/en/latest/) - JUSTIFICATION: used gspread for data manipulation inside  Google spreadsheet and  interaction with Google APIs
-- [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) -  module used to set up the authentification needed to access the Google API and connect my Service Account with the Credentials function. A creds.json file is created with all details the API needs to access the google account. In deployment to heroku this information is stored in the config var section along with another custom config var provided by code institute.
+- [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) -JUSTIFICATION:  I used this module  to set up the authentification needed to access the Google API and connect my Service Account with the Credentials function. A creds.json file is created with all details the API needs to access the google account. In deployment to heroku this information is stored in the config var section along with another custom config var provided by code institute.
 
 [Back to Table Of Contents](#table-of-contents)
 
@@ -888,7 +888,7 @@ Application has been deployed from GitHub to Heroku by following the steps:
 5. Under Config Vars store any sensitive data you saved in .json file. Name 'Key' field, copy the .json file and paste it to 'Value' field. Also add a key 'PORT' and value '8000'.
 6. Add required buildpacks (further dependencies). For this project, set it up so Python will be on top and Node.js on bottom
 7. Go to "Deploy" and select "GitHub" in "Deployment method"
-8.To connect Heroku app to your Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below
+8. To connect Heroku app to your Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below
 9.  Choose the branch you want to buid your app from
 10. If prefered, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
 11. Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
@@ -927,6 +927,7 @@ Application has been deployed from GitHub to Heroku by following the steps:
 - [you tube channel](https://www.youtube.com/watch?v=sVeu_W9Lp8s&t=44s)-code and help in better understanding unit test
 
 - [stackoverflow-user](https://stackoverflow.com/users/2745495/gino-mempin)- for clearing up how to write unit test for more complex function and using mock in unit test
+- [stackoverflow](https://stackoverflow.com/)-added functionality that user cannot type into the terminal unless program is asking for an input
 
 
 
