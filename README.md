@@ -266,7 +266,7 @@ VSCode was used to write the project code using Code Institute template
 - [colorama](https://pypi.org/project/colorama/) -JUSTIFICATION: used this library to add color to the terminal and enhance user experience.  warning information is marked red while details that user can focus on with green color.Program title was colored blue 
 - [email_validator](https://pypi.org/project/email-validator/) - JUSTIFICATION: used this library to validate if user email input is in correct form
 - [gspread](https://docs.gspread.org/en/latest/) - JUSTIFICATION: used gspread for data manipulation inside  Google spreadsheet and  interaction with Google APIs
-- [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) -JUSTIFICATION:  I used this module  to set up the authentification needed to access the Google API and connect my Service Account with the Credentials function. A creds.json file is created with all details the API needs to access the google account. In deployment to heroku this information is stored in the config var section along with another custom config var provided by code institute.
+- [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) -JUSTIFICATION:  I used this module to set up the authentification needed to access the Google API and connect my Service Account with the Credentials function. A creds.json file is created with all details the API needs to access the google account. In deployment to heroku this information is stored in the config var section along with another custom config var provided by code institute.
 
 [Back to Table Of Contents](#table-of-contents)
 
@@ -321,7 +321,7 @@ as an existing user
 
 - User is prompted to make a username
 - Validating username input
-- User asked to provide valid email address
+- User asked to provide a valid email address
 - Informs user is email in valid format
 - Saving credentials into the Google Spreadsheet
 - User story covered: 3,16,5,14
@@ -335,9 +335,9 @@ as an existing user
 
 - User is prompted to enter the valid email that is stored in a database
 - validating email
-- if email is not in the database user is taken step back to choose
+- if email is not in the database user is taken a step back to choose
  between new user or existing user
- - if email is in the database user is greeted with username
+ - if email is in the database user is greeted with the username
  and with the last result achieved while using the program
 - user story covered: 15,3,16
 <details>
@@ -350,8 +350,8 @@ as an existing user
 
 - user can start creating players inside
   given parameters
-- if input is not inside parameter user is asked to repeat the input 
-along with message that gives instruction on valid inputs
+- if the input is not inside the parameters user is asked to repeat the input 
+along with a message that gives instructions on valid inputs
 - user story covered: 6,9,13,14,10
 <details>
 <summary>Screenshot</summary>
@@ -430,9 +430,9 @@ input validation implemented
 
 ### Final value and thank you note
 
-- user is presented with final result of the program
+- user is presented with a final result of the program
 team performance percentage based on inputs given
-and user is greeted with a thank you message
+and the user is greeted with a thank you message
 - user story covered: 11,18
 <details>
 <summary>Screenshot</summary>
@@ -442,8 +442,8 @@ and user is greeted with a thank you message
 
 ### End or play again menu
 
-- user has 2 options to choose to go again or to exit program
-- if go again is chosen user final result achieved is deleted from the database and it will be updated with new result at the end
+- user has 2 options to choose to go again or to exit the program
+- if go again is chosen user final result achieved is deleted from the database and it will be updated with a new result at the end
 - is exit option is chosen program is terminated
 - user story covered: 8,2,12
 <details>
@@ -456,7 +456,7 @@ and user is greeted with a thank you message
 ### User Input Validation
 - Displays an error message if user input is not in a form that was expected or 
 inside given parameters
-- Asks for a new input and provides guidance to user on how to make valid input
+- Asks for new input and provides guidance to user on how to make valid input
 - User stories covered: 5,6,13,15
 
 <details>
@@ -513,17 +513,17 @@ inside given parameters
 <hr>
 
 - Future development of this program would very likely include
-1. Training options for longer period of time(week)
+1. Training options for longer periods of time(week)
 2. Diet schedule period of (week or more)
 3. Rest schedule period of(week or more)
-4. Implementing calculation of training impact to individual athlete and adding that calculation to 
-final percentage
+4. Implementing calculation of training impact to the individual athlete and adding that calculation to 
+the final percentage
 
 ## Validation
 <hr>
 
 - Since  [PEP8 Validation Service](http://pep8online.com/) site is down and can't be used
-PEP8 validator "pycodestyle" was installed directly to  Gitpod Workspace and Im uploading images of all 
+PEP8 validator "pycodestyle" was installed directly to  Gitpod Workspace and I'm uploading images of all 
 python files in my project. All files are cleared of errors and are up to PEP8 standards (if there were any errors there would be a red line inside my source code)
 
 <details>
@@ -588,7 +588,7 @@ The testing approach is as follows:
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Options menu 1 | Select between 2 options | user is taken to options menu 2 (where new or existing user option is presented ) or user is exiting the program  | Works as expected |
 | Options menu 2 |  Select between 2 options | use can create a new user or log in as an existing one | Works as expected|
-| End or play again menu | Select between 2 options | user can go agin and go trough program or exit the program| Works as expected|
+| End or play again menu | Select between 2 options | user can go agin and go through program or exit the program| Works as expected|
 
 <details><summary>Screenshot</summary>
 <img src="docs/testing/user_stories/story2.jpg">
@@ -605,7 +605,7 @@ The testing approach is as follows:
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Create user(Sign-up)| User is choosing new user option| User is prompted to put a username and valid email address| Works as expected |
-| Validate exsisting user(Log-in) |User is choosing existing  user option | User is prompted valid email address if email is in database user is greeted with username and can proceed to using program| Works as expected|
+| Validate existing user(Log-in) |User is choosing existing user option | User is prompted valid email address if email is in database user is greeted with username and can proceed to using program| Works as expected|
 <details><summary>Screenshot</summary>
 <img src="docs/testing/user_stories/story3.jpg">
 </details>
@@ -618,7 +618,7 @@ The testing approach is as follows:
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Created players table | expected from user to put in valid inputs | Table with input values is presented| Works as expected| 
-| Calculated values table | user inputs  expected to be valid | Table with Calculated values is presented |  Works as expected| 
+| Calculated values table | user inputs expected to be valid | Table with Calculated values is presented |  Works as expected| 
 <details><summary>Screenshot</summary>
 <img src="docs/testing/user_stories/story4.jpg">
 </details>
@@ -630,7 +630,7 @@ The testing approach is as follows:
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| user input validations| user input is otutside parameters or invalid| Red text displayed informing user on invalid input| Works as expected| 
+| user input validations| user input is outside parameters or invalid| Red text displayed informing user on invalid input| Works as expected| 
 
 <details><summary>Screenshot1</summary>
 <img src="docs/testing/user_stories/story5.jpg">
@@ -711,7 +711,7 @@ The testing approach is as follows:
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Creating players | user credentials are validated| various inputs inside parameters gives creativity to user |Works as expected|
+| Creating players | user credentials are validated| various inputs inside parameters give creativity to user |Works as expected|
 
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user_stories/story9.jpg">
@@ -731,8 +731,8 @@ The testing approach is as follows:
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Options menu 2 | user can choose between 2 options| user taken to desired direction depending on input |Works as expected|
-| End or play again menu | user can choose between 2 options| user taken to desired direction depending on input |Works as expected|
+| Options menu 2 | user can choose between 2 options| user taken to the desired direction depending on input |Works as expected|
+| End or play again menu | user can choose between 2 options| user taken to the desired direction depending on input |Works as expected|
 
 <details><summary>Screenshot</summary>
 <img src="docs/testing/user_stories/story12-12b=8a.jpg">
@@ -745,7 +745,7 @@ The testing approach is as follows:
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| User Input Validation | user input is otutside parameters or invalid| Red text displayed informing user on invalid input| Works as expected|   
+| User Input Validation | user input is outside parameters or invalid| Red text displayed informing user on invalid input| Works as expected|   
 
 <details><summary>Screenshot1</summary>
 <img src="docs/testing/user_stories/story13.jpg">
@@ -795,8 +795,8 @@ The testing approach is as follows:
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Create user(Sign-up) | input valid credentials for user | user credentials stored in database | Works as expected|
-| Validate exsisting user(Log-in) | input valid email | email is retrieved from database and user is greeted | Works as expected|
+| Create a user(Sign-up) | input valid credentials for user | user credentials stored in database | Works as expected|
+| Validate existing user(Log-in) | input valid email | email is retrieved from database and user is greeted | Works as expected|
 
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user_stories/story3.jpg">
@@ -810,8 +810,8 @@ The testing approach is as follows:
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Options menu 1 | user can choose option to exit program | program is terminated | Works as expected|
-| End or play again menu | user can choose option to exit program | program is terminated | Works as expected|
+| Options menu 1 | user can choose an option to exit program | program is terminated | Works as expected|
+| End or play again menu | user can choose an option to exit program | program is terminated | Works as expected|
 
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user_stories/story2.jpg">
@@ -838,14 +838,14 @@ The testing approach is as follows:
 <details><summary> unit testing</summary>
 
 - Tests are run  using Python unittest library
-- Since i was introduced to "unit testing " when most of source code for program was almost finished only small
-part of project was tested.
-- User score function was tested for various inputs .
+- Since i was introduced to "unit testing " when most of the source code for the program was almost finished only a small
+part of the project was tested.
+- User score function was tested for various inputs.
 
 
 ![Test passed (various inputs)](docs/testing/unit_test/user_score_valid.png)
 
-- when tested with empty string input typeError should be raised (since function is appending score value that should be int or float value)
+- when tested with empty string input typeError should be raised (since function is appending score value that should be int. or float value)
 so I had to write some more validation for this function
 
 
@@ -858,8 +858,8 @@ so I had to write some more validation for this function
 
 <hr>
 - Testing display menu function in (validate.py) file
-since this function is more complex and function that is called from that function is based on user input
-after doing research and got question answered on stackoverflow,only behaviour of the function is tested.
+since this function is more complex and the function that is called from that function is based on user input
+after doing research and getting a question answered on stackoverflow,only behaviour of the function is tested.
 and after both tests passed function is calling the right function based on user input
 
 ![Test passed](docs/testing/unit_test/display_menu.png)
@@ -870,17 +870,17 @@ and after both tests passed function is calling the right function based on user
 
 | **Bug** | **Fix** |
 | ------- | ------- |
-| In validating user inputs when creating player pycodestyle was warning about "too broad exception" in while loop.| add  "ValueError" whan catching the exception with suitable error message|
-| When breaking a too long line of code forgot to put "backslash(`\`)" to move on next line and didnt match previous indentation| putting "backslash(`\`)" when moving on next line and press (tab)
+| In validating user inputs when creating player pycodestyle was warning about "too broad exception" in the while loop.| add  "ValueError" when catching the exception with a suitable error message|
+| When breaking a too-long line of code forgot to put "backslash(`\`)" to move on next line and didn't match the previous indentation| putting "backslash(`\`)" when moving on next line and press (tab)
 to match previous line indentation|
-|when using Colorama and keyword "Fore" to color the  choices that requires user input ,user input was in last color of choice(red)|I colored the blank space white before closing colored choices line so anything inputed after that would be in white color|
+|when using Colorama and the keyword "Fore" to color the choices that require user input ,user input was in the last color of choice(red)|I colored the blank space white before closing the colored choices line so any input after that would be in white color|
 |When creating subclass palyer in a for loop and keyword range i set the wrong range cause last number in range is not included|change last number in range to one greater 
 
 ## Deployment
 
 ### Heroku
 <hr>
-Application has been deployed from GitHub to Heroku by following the steps:
+The Application has been deployed from GitHub to Heroku by following the steps:
 
 1. Create or log in to your account at heroku.com
     <details><summary>Screenshot</summary>
@@ -923,7 +923,7 @@ Application has been deployed from GitHub to Heroku by following the steps:
 
 ### Forking the GitHub Repository
 1. Go to the GitHub repository
-2. Click on Fork button in top right corner
+2. Click on the Fork button in the top right corner
 3. Copy of the repository will be in your own GitHub account.
    
 ### Making a Local Clone
@@ -941,10 +941,10 @@ Application has been deployed from GitHub to Heroku by following the steps:
 
 ### Code
 -  [gspread documentation](https://docs.gspread.org/en/latest/user-guide.html) explained how to create read update and delete  values in the google spreadsheet
-- [CalorieNinjas-API-Documentation](https://calorieninjas.com/api) - helped me in making function that calculates caloric value of user choices for each player.
-- [ASCII Art Generator](http://patorjk.com/software/taag/) was used to create game title
+- [CalorieNinjas-API-Documentation](https://calorieninjas.com/api) - helped me in making a function that calculates the caloric value of user choices for each player.
+- [ASCII Art Generator](http://patorjk.com/software/taag/) was used to create program title
 
-- Code Institute -  "Love Sandwiches - Essentials Project" walktrough  helped me to connect  Google Spreadsheet to my project.
+- Code Institute -  "Love Sandwiches - Essentials Project" walkthrough helped me to connect  Google Spreadsheet to my project.
 
 - How to install a Python module, eg. [email validation](https://pypi.org/project/email-validator/Installing)
 
@@ -963,10 +963,10 @@ Application has been deployed from GitHub to Heroku by following the steps:
 ## Acknowledgements
 
 ***
-I would like to take a few moments to say Thank you to following people:
+I would like to take a few moments to say Thank you to the following people:
 
-- First i would like to thank my wife Una and my daughter Tara for continuous support and understanding while working on development of this project.
+- First, I would like to thank my wife Una, and my daughter Tara for their continuous support and understanding while working on the development of this project.
 
--  I would like to thank my Mentor Mo.Shami for his support ,insight expertise and guidance.
-- [Warwick Hart](https://github.com/BobWritesCode) for some great ideas and feedback when reviewing project.
+-  I would like to thank my Mentor Mo.Shami for his support, insight expertise, and guidance.
+- [Warwick Hart](https://github.com/BobWritesCode) for some great ideas and feedback when reviewing the project.
 -  Awesome Code Institute Slack community for being there
